@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+*{
+    /* margin: 0; */
+    /* padding: 0; */
+    box-sizing: border-box;
+
+}
+.custom-dashed {
+    border: 1px dashed black;
+    border-image: repeating-linear-gradient(45deg, black 0, black 10px, transparent 10px, transparent 20px) 20;
+  }
