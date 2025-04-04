@@ -23,10 +23,17 @@ const AIPoweredSection = () => {
           </h1>
           <div className="relative flex justify-center w-2/5">
             {/* Image takes 40% width */}
-            <div className="absolute bg-[#b6e026] rounded-full z-10 w-[30vw] h-[30vw]"></div>
+            <div className="absolute bg-[#b6e026] rounded-full z-10 w-[28vw] h-[28vw]"></div>
             <div className="relative z-20 max-w-[50vw]">
               <svg className="w-full h-auto" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
-                <image href="src/Images/laptop.svg" alt="Laptop illustration" x="-190" y="-50" width="200%" height="140%" />
+                <image
+                  href="src/Images/laptop.svg"
+                  alt="Laptop illustration"
+                  x="-190"
+                  y="-50"
+                  width="200%"
+                  height="140%"
+                />
               </svg>
             </div>
           </div>
@@ -43,7 +50,14 @@ const AIPoweredSection = () => {
             <div className="absolute bg-[#b6e026] rounded-full z-10 w-[15vw] h-[15vw]"></div>
             <div className="relative z-20 max-w-[30vw]">
               <svg className="w-full h-auto" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
-                <image href="src/Images/laptop.svg" alt="Laptop illustration" x="-90" y="-20" width="150%" height="110%" />
+                <image
+                  href="src/Images/laptop.svg"
+                  alt="Laptop illustration"
+                  x="-90"
+                  y="-20"
+                  width="150%"
+                  height="110%"
+                />
               </svg>
             </div>
           </div>
@@ -51,12 +65,8 @@ const AIPoweredSection = () => {
       )}
 
       {/* Text and Buttons Section */}
-      <div className="text-center md:text-left">
-        <p
-          className={`leading-relaxed text-gray-700 mb-6 ${
-            windowWidth <= 640 ? 'text-xs' : 'text-lg'
-          }`}
-        >
+      <div className="w-full md:w-1/2 text-center md:text-left">
+        <p className={`leading-relaxed text-gray-700 mb-6 ${windowWidth <= 640 ? 'text-s' : 'text-lg'}`}>
           Empowering subcontractors with smart credit solutions, real-time payments, and seamless workflow management.
         </p>
         <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 justify-center md:justify-start">
