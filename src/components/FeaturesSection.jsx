@@ -42,6 +42,7 @@ const FeaturesSection = () => {
           description={feature.description}
         />
       ))}
+
     </div>
   );
 };
