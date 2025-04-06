@@ -10,7 +10,7 @@ const Navbar = () => {
   return (
     <div className="navbar-container border-b-2 border-black">
       <nav className="navbar flex justify-between items-center p-4 bg-white relative z-10">
-        <a href="#" className="logo text-2xl font-bold text-[#313234] no-underline">
+        <a href="/" className="logo text-2xl font-bold text-[#313234] no-underline">
           GRYORK
         </a>
         <div className="flex items-center space-x-4">
@@ -25,10 +25,10 @@ const Navbar = () => {
         {isMenuOpen && (
           <div className="menu absolute top-full right-0 bg-white shadow-md p-4">
             <ul className="space-y-2">
-              <li><a href="#" className="text-[#313234] no-underline">Home</a></li>
-              <li><a href="#" className="text-[#313234] no-underline">Services</a></li>
-              <li><a href="#" className="text-[#313234] no-underline">About</a></li>
-              <li><a href="#" className="text-[#313234] no-underline">Contact</a></li>
+              <li><a href="/" className="text-[#313234] no-underline">Home</a></li>
+              <li><a href="/services" className="text-[#313234] no-underline">Services</a></li>
+              <li><a href="/about" className="text-[#313234] no-underline">About</a></li>
+              <li><a href="/contact" className="text-[#313234] no-underline">Contact</a></li>
             </ul>
           </div>
         )}

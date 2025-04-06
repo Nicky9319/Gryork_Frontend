@@ -1,12 +1,14 @@
 import React from 'react';
+
 import Navbar from './components/Navbar';
-// import HeroSection from './components/HeroSection';
-// import ProblemSection from './components/ProblemSection';
-// import AIPoweredSection from './components/AIPoweredSection';
-// import ServicesSection from './components/ServicesSection';
-// import FeaturesSection from './components/FeaturesSection';
 import Footer from './components/Footer';
+
 import MainPage from './Views/MainPage/mainpage'
+
+import DisputeResolution from './Views/MoreInfo/disputeresolution';
+import Grylink from './Views/MoreInfo/grylink';
+import AboutUs from './Views/MoreInfo/aboutus';
+import GryorkExplained from './Views/MoreInfo/gryorkexplained';
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
@@ -26,6 +28,10 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<MainPage />} />
+          <Route path="/dispute-resolution" element={<DisputeResolution />} />
+          <Route path="/grylink" element={<Grylink />} />
+          <Route path="/about-us" element={<AboutUs />} />
+          <Route path="/gryork-explained" element={<GryorkExplained />} />
         </Routes>
       </Router>
 
