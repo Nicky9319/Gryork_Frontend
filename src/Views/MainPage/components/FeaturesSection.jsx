@@ -16,7 +16,7 @@ const FeatureCard = ({ icon, title, description }) => {
 const FeaturesSection = () => {
   const features = [
     {
-      icon: '/src/Images/flash.svg',
+      icon: 'src/Images/flash.svg',
       title: 'SPEED',
       description: 'Get credit in a day with full transparency',
     },
