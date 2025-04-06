@@ -53,11 +53,11 @@ const AboutUsSection = () => {
     <div className="w-full px-6 py-12 text-gray-800 pl-10 pr-10">
       <h2 className="text-6xl font-semibold text-green-600 mb-12">About us</h2>
 
-      <div className="flex flex-col lg:flex-row items-start gap-12">
+      <div className="flex flex-col lg:flex-row items-start">
         {/* Left Section: Problems */}
-        <div className="flex-1">
+        <div className="w-full lg:w-1/2 border-r border-gray-500 pb-10">
           <h3 className="text-[40px] font-semibold mb-6">🛠️ Problem</h3>
-          <div className="space-y-6">
+          <div className="space-y-6 w-[95%] ml-0">
             {problems.map((problem, index) => (
               <Card key={index} className="shadow-md transform transition-transform hover:scale-102">
                 <CardContent>
@@ -69,15 +69,10 @@ const AboutUsSection = () => {
           </div>
         </div>
 
-        {/* Divider */}
-        <div className="relative w-[2px] bg-gray-300 h-full self-stretch">
-          {/* <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-[4px] bg-green-600 h-full"></div> */}
-        </div>
-
         {/* Right Section: Solutions */}
-        <div className="flex-1">
-          <h3 className="text-[40px] font-semibold mb-6">💡 GRYORK Solution</h3>
-          <div className="space-y-6">
+        <div className="w-full lg:w-1/2 border-l border-gray-500 pb-10">
+          <h3 className="text-[40px] font-semibold mb-6 ml-[3%] ">💡 GRYORK Solution</h3>
+          <div className="space-y-6 w-[93y%] ml-[5%] ">
             {solutions.map((solution, index) => (
               <Card key={index} className="shadow-md transform transition-transform hover:scale-102">
                 <CardContent>
