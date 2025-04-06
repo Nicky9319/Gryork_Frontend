@@ -39,19 +39,23 @@ const features = [
 
 export default function GryorkExplanation() {
   return (
-    <div className="max-w-4xl mx-auto px-4 py-10">
-      <h2 className="text-green-700 text-2xl font-bold mb-2">GRYORK explained</h2>
-      <p className="text-gray-600 mb-8">
+    <div className="w-full pl-10 pr-6 pt-15 pb-25">
+      <h2 className="text-green-700 text-6xl font-bold mb-2 pb-5">GRYORK Explained</h2>
+      <p className="text-gray-600 text-[22px] mb-8 pl-3 mb-15">
         GRYORK is an AI-powered technology platform transforming the infrastructure industry with smart, seamless solutions. Here's how we make it happen.
       </p>
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pr-10">
         {features.map((feature, index) => (
-          <Card key={index} className="shadow-md">
-            <CardContent className="flex gap-4 items-start p-4">
-              <div>{feature.icon}</div>
-              <div>
-                <h3 className="text-lg font-semibold text-gray-800 mb-1">{feature.title}</h3>
-                <p className="text-sm text-gray-600">{feature.description}</p>
+          <Card key={index} className="shadow-md transform transition-transform hover:scale-102">
+            <CardContent className="flex gap-4 items-start">
+              <div className="flex flex-col justify-center items-start">
+              <div className="flex items-center gap-4 mb-3">
+                {React.cloneElement(feature.icon, { className: "w-10 h-10 text-green-600" })}
+                <h3 className="text-[30px] font-semibold text-gray-800">{feature.title}</h3>
+              </div>
+              <div className="mb-5">
+                <p className="text-[15px] text-gray-600 ml-13">{feature.description}</p>
+              </div>
               </div>
             </CardContent>
           </Card>
