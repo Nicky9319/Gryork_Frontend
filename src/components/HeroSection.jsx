@@ -26,8 +26,8 @@ const HeroSection = () => {
         }}
       />
       <h1
-        className={`font-bold text-gray-700 text-center mb-4 relative z-10 px-4 shadow-text absolute ${
-          window.innerWidth <= 640 ? 'text-5xl top-6' : 'text-6xl top-10'
+        className={`font-bold text-[#4A4A4A] text-center mb-4 relative z-10 px-4 shadow-text absolute ${
+          window.innerWidth <= 640 ? 'text-8xl top-6' : 'text-9xl top-10'
         }`}
       >
         Grow your work
@@ -36,44 +36,29 @@ const HeroSection = () => {
       <div
         className={`relative z-10 flex shadow-md mt-auto mb-auto ${
           window.innerWidth <= 640
-            ? 'w-4/5 max-w-[300px]'
-            : 'w-1/2 max-w-[1000px] justify-center'
+            ? 'w-3/5 max-w-[250px]'
+            : 'w-2/5 max-w-[800px] justify-center'
         }`}
       >
         <div
-          className={`flex items-center bg-white rounded-l-full ${
-            window.innerWidth <= 640 ? 'py-2 px-3 text-xs' : 'py-4 px-6 text-base'
+          className={`flex-grow flex items-center border-none outline-none bg-gray-200 rounded-full placeholder-gray-500 text-gray-700 ${
+            window.innerWidth <= 640 ? 'py-1 px-3 text-sm' : 'py-2 px-4 text-base'
           }`}
         >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className={`h-5 w-5 text-gray-500 ${
-              window.innerWidth <= 640 ? 'mr-2' : 'mr-4'
-            }`}
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M10 18a8 8 0 100-16 8 8 0 000 16zm21 21l-4.35-4.35"
-            />
-          </svg>
           <input
             type="text"
-            className="flex-grow border-none outline-none bg-white"
+            className="flex-grow bg-transparent outline-none placeholder-gray-500 text-gray-700 w-3/4 pl-10"
             placeholder="enter your company name"
+            style={{ fontSize: window.innerWidth <= 640 ? '1rem' : '1.25rem' }}
           />
+          <button
+            className={`border-none rounded-full bg-[#268044] text-white cursor-pointer transition-colors duration-300 hover:bg-green-900 ${
+              window.innerWidth <= 640 ? 'py-1 px-3 text-lg' : 'py-2 px-10 text-xl'
+            }`}
+          >
+            submit
+          </button>
         </div>
-        <button
-          className={`border-none rounded-r-full bg-[#b6d233] text-white font-bold cursor-pointer transition-colors duration-300 hover:bg-[#a3bc2a] ${
-            window.innerWidth <= 640 ? 'py-2 px-4 text-xs' : 'py-4 px-8'
-          }`}
-        >
-          submit
-        </button>
       </div>
     </section>
   );
