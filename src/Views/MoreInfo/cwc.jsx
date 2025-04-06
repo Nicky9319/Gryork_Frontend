@@ -1,9 +1,16 @@
 import FeatureItem from "./components/featureItem";
 import { CheckCircle, Percent, Banknote, Smartphone, Shield, FileText, Send } from "lucide-react";
 
+import TopicHighlightCard from "./components/topicHighlightCard";
+
 const CWC = () => {
   return (
     <div className="w-full py-10 space-y-10">
+
+
+      <TopicHighlightCard />
+
+
       <FeatureItem
         icon={Send}
         title="AI-powered Credit Approval"
