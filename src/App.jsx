@@ -10,6 +10,8 @@ import Grylink from './Views/MoreInfo/grylink';
 import AboutUs from './Views/MoreInfo/aboutus';
 import GryorkExplained from './Views/MoreInfo/gryorkexplained';
 
+import CWC from './Views/MoreInfo/cwc';
+
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
@@ -32,6 +34,7 @@ function App() {
           <Route path="/grylink" element={<Grylink />} />
           <Route path="/about-us" element={<AboutUs />} />
           <Route path="/gryork-explained" element={<GryorkExplained />} />
+          <Route path="/cwc" element={<CWC/>}/>
         </Routes>
       </Router>
 
