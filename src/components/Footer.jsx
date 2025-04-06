@@ -6,21 +6,19 @@ const Footer = () => {
     <section className="bg-lime-500 text-gray-800 py-16 px-[10%] flex flex-col">
       {/* First Row: Menu and Trust & Safety */}
       <div className="flex flex-wrap mb-10">
-        {/* Left Column - Company Menu */}
+        {/* /* Left Column - Company Menu */ }
         <div className="w-full md:w-[30%] mb-6 md:mb-0">
           <h2 className="text-2xl font-bold text-white mb-5">Company</h2>
           <ul className="list-none">
             {[
               "Home",
               "Product",
-              "Solutions",
               "Gryork explained",
               "Dispute resolution",
               "About us",
               "Help & support",
-              "Contact us",
             ].map((item, index) => (
-              <li key={index} className="mb-4">
+              <li key={index} className="mb-2">
                 <a
                   href="#"
                   className="text-gray-800 text-lg hover:text-white transition-colors"
@@ -32,7 +30,7 @@ const Footer = () => {
           </ul>
         </div>
 
-        {/* Center Column - Trust & Safety Content */}
+        {/* /* Center Column - Trust & Safety Content */ }
         <div className="w-full md:w-[70%]">
           <h2 className="text-2xl font-bold text-white mb-5">Trust & safety</h2>
           <p className="text-xl font-bold mb-5">You're Always Secure</p>
@@ -55,25 +53,25 @@ const Footer = () => {
 
       {/* Second Row: Social and Logo */}
       <div className="flex flex-wrap">
-        {/* Social Column */}
+        {/* /* Social Column */}
         <div className="w-full md:w-[50%] mb-6 md:mb-0">
           <h2 className="text-2xl font-bold text-white mb-5">Social</h2>
           <div className="flex gap-4 mt-4">
             <a
               href="#"
-              className="bg-gray-800 text-white w-10 h-10 rounded-full flex justify-center items-center"
+              className="bg-white text-gray-800 w-10 h-10 rounded-full flex justify-center items-center"
             >
               <FaFacebookF size={20} />
             </a>
             <a
               href="#"
-              className="bg-gray-800 text-white w-10 h-10 rounded-full flex justify-center items-center"
+              className="bg-white text-gray-800 w-10 h-10 rounded-full flex justify-center items-center"
             >
               <FaInstagram size={20} />
             </a>
             <a
               href="#"
-              className="bg-gray-800 text-white w-10 h-10 rounded-full flex justify-center items-center"
+              className="bg-white text-gray-800 w-10 h-10 rounded-full flex justify-center items-center"
             >
               <FaLinkedinIn size={20} />
             </a>

@@ -3,25 +3,25 @@ import React from 'react';
 // Reusable Service Card component
 const ServiceCard = ({ title, icon, description }) => {
   return (
-    <div className="relative w-[250px] h-[250px] flex flex-col items-center md:w-[220px] md:h-[220px] mb-8 sm:w-[180px] sm:h-[180px]">
-      <div className="absolute -top-[35px] left-1/2 transform -translate-x-1/2 z-10" style={{ background: 'none' }}>
-        <img src={icon} alt={title} className="w-20 h-20 sm:w-16 sm:h-16" />
+    <div className="relative w-[450px] h-[450px] flex flex-col items-center md:w-[380px] md:h-[380px] mb-8 sm:w-[300px] sm:h-[300px]">
+      <div className="absolute -top-[55px] left-1/2 transform -translate-x-1/2 z-10" style={{ background: 'none' }}>
+        <img src={icon} alt={title} className="w-36 h-36 sm:w-28 sm:h-28" />
       </div>
       
       <div className="w-full h-full rounded-full overflow-hidden relative shadow-md">
-        <div className="before:content-[''] before:absolute before:top-0 before:left-0 before:w-full before:h-1/2 before:bg-white before:z-[1] after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-1/2 after:bg-[#b0d12a] after:z-[1]">
-          <div className="relative z-[2] w-full h-full flex flex-col justify-center items-center p-5 text-center">
+        <div className="before:content-[''] before:absolute before:top-0 before:left-0 before:w-full before:h-1/2 before:bg-white before:z-[1] after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-1/2 after:bg-[#268044] after:z-[1]">
+          <div className="relative z-[2] w-full h-full flex flex-col justify-center items-center p-12 text-center">
+            <br /><br />
+            <h3 className="text-5xl font-bold uppercase z-[2] mb-3 mt-10 sm:text-4xl">{title}</h3>
             <br />
-            <h3 className="text-xl font-bold uppercase z-[2] mb-1 mt-6 sm:text-lg">{title}</h3>
-            <br />
-            <p className="text-base leading-snug text-black z-[2] relative -top-[15%] md:text-sm sm:text-xs">
+            <p className="text-2xl leading-snug text-black z-[2] relative -top-[15%] md:text-xl sm:text-lg text-white">
               {description}
             </p>
           </div>
         </div>
       </div>
       
-      <a href="#" className="absolute -bottom-[15px] left-1/2 transform -translate-x-1/2 bg-[#f1f8b5] py-1.5 px-4 rounded-full text-black no-underline text-sm font-bold z-10 shadow-sm sm:text-xs sm:py-1 sm:px-3">
+      <a href="#" className="absolute -bottom-[25px] left-1/2 transform -translate-x-1/2 bg-[#CFF063] py-4 px-10 rounded-full text-black no-underline text-xl font-bold z-10 shadow-sm sm:text-lg sm:py-3 sm:px-8">
         learn more
       </a>
     </div>
@@ -49,21 +49,33 @@ const ServicesSection = () => {
       title: 'TEAMS',
       icon: '/src/Images/hierarchy-structure.svg',
       description: 'Build and grow a skilled work balance'
+    },
+    {
+      title: 'GRYLINK',
+      icon: '/src/Images/grylink.svg',
+      description: 'Smarter Credit Decisions. Seamless Integration'
     }
   ];
 
   return (
-    <div className="max-w-[1200px] mx-auto my-12 flex flex-wrap justify-center gap-8 md:gap-10 sm:gap-6 sm:px-4">
-      <div className="flex flex-wrap justify-center gap-8 mb-12 md:gap-10 sm:gap-6 sm:mb-8">
-        {services.slice(0, 3).map((service, index) => (
-          <ServiceCard key={index} {...service} />
-        ))}
-      </div>
-      
-      <div className="flex justify-center gap-8 mb-12 md:gap-10 sm:gap-6 sm:mb-8">
-        {services.slice(3).map((service, index) => (
-          <ServiceCard key={index} {...service} />
-        ))}
+    <div className="max-w-[1600px] mx-auto my-12 px-8 sm:px-4">
+      <div className="flex flex-col space-y-50">
+          <div className="flex justify-evenly md:flex-wrap md:justify-center md:gap-45 sm:gap-10">
+            {services.slice(0, 3).map((service, index) => (
+              <div key={index} className="flex justify-center">
+                <ServiceCard {...service} />
+              </div>
+            ))}
+          </div>
+          
+          {/* Second row - 2 cards */}
+        <div className="flex justify-evenly md:flex-wrap md:justify-center md:gap-45 sm:gap-10">
+          {services.slice(3).map((service, index) => (
+            <div key={index} className="flex justify-center">
+              <ServiceCard {...service} />
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
