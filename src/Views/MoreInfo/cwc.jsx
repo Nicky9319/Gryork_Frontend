@@ -8,7 +8,7 @@ const CWC = () => {
     <div className="w-full py-10 space-y-10">
 
 
-      <TopicHighlightCard />
+      {/* <TopicHighlightCard /> */}
 
 
       <FeatureItem
