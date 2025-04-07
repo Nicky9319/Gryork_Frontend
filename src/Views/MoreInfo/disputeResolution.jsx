@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
 const DisputeResolution = () => {
@@ -26,33 +26,81 @@ const DisputeResolution = () => {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
   };
+
+  const [isDesktop, setIsDesktop] = useState(false);
+  
+    useEffect(() => {
+      // Function to check the viewport width
+      const checkSize = () => {
+        setIsDesktop(window.innerWidth >= 768);
+      };
+  
+      // Check initially
+      checkSize();
+      // Add event listener on resize
+      window.addEventListener('resize', checkSize);
+      // Cleanup listener on unmount
+      return () => window.removeEventListener('resize', checkSize);
+    }, []);
+
   
   return (
     <div className="w-full bg-gradient-to-b from-gray-100 to-white overflow-hidden">
       {/* Hero Section - Full Width */}
       <div className="relative w-full h-[60vh] bg-gradient-to-r from-green-800 to-green-600 overflow-hidden">
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f')] bg-cover bg-center opacity-20"></div>
+        {/* <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f')] bg-cover bg-center opacity-20"></div> */}
+        <div className="absolute inset-0 bg-pattern bg-cover bg-center opacity-20"></div>
+
         
         <div className="absolute top-0 left-0 w-32 h-32 bg-green-400 rounded-full filter blur-3xl opacity-20 animate-pulse"></div>
         <div className="absolute bottom-0 right-0 w-64 h-64 bg-yellow-300 rounded-full filter blur-3xl opacity-20 animate-pulse" style={{animationDelay: '2s'}}></div>
         
-        <div className="container mx-auto h-full flex items-center px-4 sm:px-8 lg:px-16 relative z-10">
-          <motion.div 
-            initial="hidden"
-            animate="visible"
-            variants={fadeIn}
-            className="max-w-3xl"
-          >
-            <h1 className="text-5xl md:text-7xl font-bold text-slate-200 mb-6 [text-shadow:_0_3px_5px_rgba(0,0,0,0.6)]">
-              Dispute Resolution
-            </h1>
-            <div className="w-32 h-2 bg-yellow-400 mb-8 rounded-full"></div>
-            <p className="text-xl md:text-2xl text-slate-300 leading-relaxed [text-shadow:_0_2px_4px_rgba(0,0,0,0.5)]">
-              At <span className="font-bold text-yellow-300">GRYORK</span>, we believe in fair and accessible justice for
-              everyone in the industry, with faster resolutions and lower costs than traditional legal processes.
-            </p>
-          </motion.div>
-        </div>
+        
+
+
+               {isDesktop ? (
+                  // Desktop version
+                  <div className="container h-full flex items-center relative z-10">
+                    <motion.div
+                      initial="hidden"
+                      animate="visible"
+                      variants={fadeIn}
+                      className="max-w-3xl"
+                    >
+                      <h1 className="text-5xl md:text-7xl font-bold text-white mb-8 [text-shadow:_0_3px_5px_rgba(0,0,0,0.6)] pl-32">
+                      Dispute Resolution
+                      </h1>
+                      <div className="w-32 h-2 bg-yellow-400 mb-10 rounded-full ml-32"></div>
+                      <div className="bg-white/85 border border-white backdrop-blur-[6px] p-6 rounded-r-lg shadow-xl shadow-2xl ring-1 ring-white/40">
+                        <p className="text-[20px] text-black drop-shadow-md">
+                        At GRYORK, we believe in fair and accessible justice for
+                      everyone in the industry, with faster resolutions and lower costs than traditional legal processes.
+                        </p>
+                      </div>
+                    </motion.div>
+                  </div>
+                ) : (
+                  // Mobile version
+                  <div className="container mx-auto h-full flex items-center px-4 sm:px-8 lg:px-16 relative z-10">
+                    <motion.div
+                      initial="hidden"
+                      animate="visible"
+                      variants={fadeIn}
+                      className="max-w-3xl"
+                    >
+                      <h1 className="text-5xl md:text-7xl font-bold text-slate-200 mb-6 [text-shadow:_0_3px_5px_rgba(0,0,0,0.6)]">
+                      Dispute Resolution
+                      </h1>
+                      <div className="w-32 h-2 bg-yellow-400 mb-8 rounded-full"></div>
+                      <p className="text-xl md:text-2xl text-[#000] leading-relaxed ">
+                      At GRYORK, we believe in fair and accessible justice for
+                      everyone in the industry, with faster resolutions and lower costs than traditional legal processes.
+                      </p>
+                    </motion.div>
+                  </div>
+                )}
+
+
         
         {/* Semi-transparent overlay for text readability extending below the wave */}
         <div className="absolute left-0 right-0 bottom-0 h-32 bg-gradient-to-b from-transparent to-gray-100 opacity-90"></div>

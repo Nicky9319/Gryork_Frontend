@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { CheckCircle } from "lucide-react";
 import { Card, CardContent } from "../../components/ui/card";
 import { motion } from "framer-motion";
@@ -49,6 +49,8 @@ const problems = [
   },
 ];
 
+
+
 const AboutUsSection = () => {
   useEffect(() => {
     // Add animation library
@@ -71,6 +73,24 @@ const AboutUsSection = () => {
     };
   }, []);
 
+  const [isDesktop, setIsDesktop] = useState(false);
+
+  useEffect(() => {
+    // Function to check the viewport width
+    const checkSize = () => {
+      setIsDesktop(window.innerWidth >= 768);
+    };
+
+    // Check initially
+    checkSize();
+    // Add event listener on resize
+    window.addEventListener('resize', checkSize);
+    // Cleanup listener on unmount
+    return () => window.removeEventListener('resize', checkSize);
+  }, []);
+
+
+
   // Animation variants
   const fadeIn = {
     hidden: { opacity: 0, y: 20 },
@@ -85,26 +105,52 @@ const AboutUsSection = () => {
         <div className="absolute top-0 left-0 w-32 h-32 bg-green-400 rounded-full filter blur-3xl opacity-20 animate-pulse"></div>
         <div className="absolute bottom-0 right-0 w-64 h-64 bg-yellow-300 rounded-full filter blur-3xl opacity-20 animate-pulse" style={{ animationDelay: '2s' }}></div>
 
-        <div className="container mx-auto h-full flex items-center px-4 sm:px-8 lg:px-16 relative z-10">
-          <motion.div
-            initial="hidden"
-            animate="visible"
-            variants={fadeIn}
-            className="max-w-3xl"
-          >
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-8 [text-shadow:_0_3px_5px_rgba(0,0,0,0.6)] ">
-              About Us
-            </h1>
-            <div className="w-32 h-2 bg-yellow-400 mb-15 rounded-full "></div>
 
-            <div className="bg-[#FFB22C]/90 rounded-lg px-4 py-3">
-              <p className="text-xl md:text-3xl text-[#000]">
+
+        {isDesktop ? (
+          // Desktop version
+          <div className="container h-full flex items-center relative z-10">
+            <motion.div
+              initial="hidden"
+              animate="visible"
+              variants={fadeIn}
+              className="max-w-3xl"
+            >
+              <h1 className="text-5xl md:text-7xl font-bold text-white mb-8 [text-shadow:_0_3px_5px_rgba(0,0,0,0.6)] pl-32">
+                About Us
+              </h1>
+              <div className="w-32 h-2 bg-yellow-400 mb-10 rounded-full ml-32"></div>
+              <div className="bg-white/85 border border-white backdrop-blur-[6px] p-6 rounded-r-lg shadow-xl shadow-2xl ring-1 ring-white/40">
+                <p className="text-[30px] text-black drop-shadow-md">
+                  GRYORK is transforming the infrastructure industry with innovative solutions to long-standing challenges.
+                </p>
+              </div>
+            </motion.div>
+          </div>
+        ) : (
+          // Mobile version
+          <div className="container mx-auto h-full flex items-center px-4 sm:px-8 lg:px-16 relative z-10">
+            <motion.div
+              initial="hidden"
+              animate="visible"
+              variants={fadeIn}
+              className="max-w-3xl"
+            >
+              <h1 className="text-5xl md:text-7xl font-bold text-slate-200 mb-6 [text-shadow:_0_3px_5px_rgba(0,0,0,0.6)]">
+                About Us
+              </h1>
+              <div className="w-32 h-2 bg-yellow-400 mb-8 rounded-full"></div>
+              <p className="text-xl md:text-2xl text-[#000] leading-relaxed ">
                 GRYORK is transforming the infrastructure industry with innovative solutions to long-standing challenges.
               </p>
-            </div>
+            </motion.div>
+          </div>
+        )}
 
-          </motion.div>
-        </div>
+
+
+
+
 
         {/* Semi-transparent overlay for text readability extending below the wave */}
         <div className="absolute left-0 right-0 bottom-0 h-32 bg-gradient-to-b from-transparent to-gray-100 opacity-90"></div>
@@ -112,7 +158,7 @@ const AboutUsSection = () => {
         {/* Wave on top of semi-transparent overlay */}
         <div className="absolute bottom-0 left-0 w-full" style={{ transform: 'translateY(1px)' }}>
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" className="w-full h-auto" preserveAspectRatio="none">
-            <path fill="#f3f4f6" fillOpacity="1" d="M0,160L48,165.3C96,171,192,181,288,186.7C384,192,480,192,576,170.7C672,149,768,107,864,90.7C960,75,1056,85,1152,112C1248,139,1344,181,1392,202.7L1440,224L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+            <path fill="#E6E8EC" fillOpacity="1" d="M0,160L48,165.3C96,171,192,181,288,186.7C384,192,480,192,576,170.7C672,149,768,107,864,90.7C960,75,1056,85,1152,112C1248,139,1344,181,1392,202.7L1440,224L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
           </svg>
         </div>
       </div>

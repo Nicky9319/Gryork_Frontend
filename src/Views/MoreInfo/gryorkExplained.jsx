@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Card, CardContent } from "../../components/ui/card";
 import { motion } from "framer-motion";
 import { CheckCircle, Users, Truck, DollarSign, ShieldCheck, Briefcase, Link2 } from "lucide-react";
@@ -43,19 +43,36 @@ export default function GryorkExplanation() {
     script.src = 'https://unpkg.com/aos@next/dist/aos.js';
     script.async = true;
     document.body.appendChild(script);
-    
+
     script.onload = () => {
       window.AOS.init({
         duration: 800,
         once: false,
       });
     };
-    
+
     return () => {
       if (document.body.contains(script)) {
         document.body.removeChild(script);
       }
     };
+  }, []);
+
+
+  const [isDesktop, setIsDesktop] = useState(false);
+
+  useEffect(() => {
+    // Function to check the viewport width
+    const checkSize = () => {
+      setIsDesktop(window.innerWidth >= 768);
+    };
+
+    // Check initially
+    checkSize();
+    // Add event listener on resize
+    window.addEventListener('resize', checkSize);
+    // Cleanup listener on unmount
+    return () => window.removeEventListener('resize', checkSize);
   }, []);
 
   // Animation variants
@@ -68,31 +85,61 @@ export default function GryorkExplanation() {
     <div className="w-full bg-gradient-to-b from-gray-100 to-white overflow-hidden">
       {/* Hero Section */}
       <div className="relative w-full h-[50vh] bg-gradient-to-r from-green-700 to-green-500 overflow-hidden">
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1589939705384-5185137a7f0f')] bg-cover bg-center opacity-20"></div>
-        
+        {/* <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1589939705384-5185137a7f0f')] bg-cover bg-center opacity-20"></div> */}
+        <div className="absolute inset-0 bg-pattern bg-cover bg-center opacity-20"></div>
+
         <div className="absolute top-0 left-0 w-32 h-32 bg-green-400 rounded-full filter blur-3xl opacity-20 animate-pulse"></div>
-        <div className="absolute bottom-0 right-0 w-64 h-64 bg-yellow-300 rounded-full filter blur-3xl opacity-20 animate-pulse" style={{animationDelay: '2s'}}></div>
-        
-        <div className="container mx-auto h-full flex items-center px-4 sm:px-8 lg:px-16 relative z-10">
-          <motion.div 
-            initial="hidden"
-            animate="visible"
-            variants={fadeIn}
-            className="max-w-3xl"
-          >
-            <h1 className="text-5xl md:text-7xl font-bold text-slate-200 mb-6 [text-shadow:_0_3px_5px_rgba(0,0,0,0.6)]">
-              GRYORK Explained
-            </h1>
-            <div className="w-32 h-2 bg-yellow-400 mb-8 rounded-full"></div>
-            <p className="text-xl md:text-2xl text-slate-300 leading-relaxed [text-shadow:_0_2px_4px_rgba(0,0,0,0.5)]">
-              GRYORK is an AI-powered technology platform transforming the infrastructure industry with smart, seamless solutions.
-            </p>
-          </motion.div>
-        </div>
-        
+        <div className="absolute bottom-0 right-0 w-64 h-64 bg-yellow-300 rounded-full filter blur-3xl opacity-20 animate-pulse" style={{ animationDelay: '2s' }}></div>
+
+
+
+
+        {isDesktop ? (
+          // Desktop version
+          <div className="container h-full flex items-center relative z-10">
+            <motion.div
+              initial="hidden"
+              animate="visible"
+              variants={fadeIn}
+              className="max-w-3xl"
+            >
+              <h1 className="text-5xl md:text-7xl font-bold text-white mb-8 [text-shadow:_0_3px_5px_rgba(0,0,0,0.6)] pl-32">
+                GRYORK Explained
+              </h1>
+              <div className="w-32 h-2 bg-yellow-400 mb-10 rounded-full ml-32"></div>
+              <div className="bg-white/85 border border-white backdrop-blur-[6px] p-6 rounded-r-lg shadow-xl shadow-2xl ring-1 ring-white/40">
+                <p className="text-[20px] text-black drop-shadow-md">
+                  GRYORK is an AI-powered technology platform transforming the infrastructure industry with smart, seamless solutions.
+                </p>
+              </div>
+            </motion.div>
+          </div>
+        ) : (
+          // Mobile version
+          <div className="container mx-auto h-full flex items-center px-4 sm:px-8 lg:px-16 relative z-10">
+            <motion.div
+              initial="hidden"
+              animate="visible"
+              variants={fadeIn}
+              className="max-w-3xl"
+            >
+              <h1 className="text-5xl md:text-7xl font-bold text-slate-200 mb-6 [text-shadow:_0_3px_5px_rgba(0,0,0,0.6)]">
+                GRYORK Explained
+              </h1>
+              <div className="w-32 h-2 bg-yellow-400 mb-8 rounded-full"></div>
+              <p className="text-xl md:text-2xl text-[#000] leading-relaxed ">
+                GRYORK is an AI-powered technology platform transforming the infrastructure industry with smart, seamless solutions.
+              </p>
+            </motion.div>
+          </div>
+        )}
+
+
+
+
         {/* Semi-transparent overlay for text readability extending below the wave */}
         <div className="absolute left-0 right-0 bottom-0 h-32 bg-gradient-to-b from-transparent to-gray-100 opacity-90"></div>
-        
+
         {/* Wave on top of semi-transparent overlay */}
         <div className="absolute bottom-0 left-0 w-full" style={{ transform: 'translateY(1px)' }}>
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" className="w-full h-auto" preserveAspectRatio="none">
@@ -100,7 +147,7 @@ export default function GryorkExplanation() {
           </svg>
         </div>
       </div>
-      
+
       {/* Features Section */}
       <div className="container mx-auto px-4 sm:px-8 lg:px-16 pt-20 pb-16">
         <motion.div
@@ -117,7 +164,7 @@ export default function GryorkExplanation() {
             Here's how we make it happen with innovative solutions and cutting-edge technology.
           </p>
         </motion.div>
-        
+
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((feature, index) => (
             <motion.div
