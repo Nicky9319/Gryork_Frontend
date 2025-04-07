@@ -1,7 +1,8 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 // Reusable Service Card component
-const ServiceCard = ({ title, icon, description, urlLink }) => {
+const ServiceCard = ({ title, icon, description, urlLink, onNavigate }) => {
   return (
     <div className="relative w-[450px] h-[450px] flex flex-col items-center md:w-[380px] md:h-[380px] mb-8 sm:w-[300px] sm:h-[300px]">
       <div className="absolute -top-[55px] left-1/2 transform -translate-x-1/2 z-10" style={{ background: 'none' }}>
@@ -21,7 +22,7 @@ const ServiceCard = ({ title, icon, description, urlLink }) => {
         </div>
       </div>
       
-      <a href={urlLink || "/"} className="absolute -bottom-[25px] left-1/2 transform -translate-x-1/2 bg-[#CFF063] py-4 px-10 rounded-full text-black no-underline text-xl font-bold z-10 shadow-sm sm:text-lg sm:py-3 sm:px-8">
+      <a href={urlLink || "/"} onClick={(e) => onNavigate(urlLink || "/", e)} className="absolute -bottom-[25px] left-1/2 transform -translate-x-1/2 bg-[#CFF063] py-4 px-10 rounded-full text-black no-underline text-xl font-bold z-10 shadow-sm sm:text-lg sm:py-3 sm:px-8">
         learn more
       </a>
     </div>
@@ -29,6 +30,14 @@ const ServiceCard = ({ title, icon, description, urlLink }) => {
 };
 
 const ServicesSection = () => {
+  const navigate = useNavigate();
+  
+  const handleNavigation = (path, e) => {
+    e.preventDefault();
+    navigate(path);
+    window.scrollTo(0, 0); // Scroll to the top of the page after navigation
+  };
+
   const services = [
     {
       title: 'CWC',
@@ -68,19 +77,18 @@ const ServicesSection = () => {
           <div className="flex justify-evenly md:flex-wrap md:justify-center md:gap-45 sm:gap-10">
             {services.slice(0, 3).map((service, index) => (
               <div key={index} className="flex justify-center">
-                <ServiceCard {...service} />
+                <ServiceCard {...service} onNavigate={handleNavigation} />
               </div>
             ))}
           </div>
           
-          {/* Second row - 2 cards */}
-        <div className="flex justify-evenly md:flex-wrap md:justify-center md:gap-45 sm:gap-10">
-          {services.slice(3).map((service, index) => (
-            <div key={index} className="flex justify-center">
-              <ServiceCard {...service} />
-            </div>
-          ))}
-        </div>
+          <div className="flex justify-evenly md:flex-wrap md:justify-center md:gap-45 sm:gap-10">
+            {services.slice(3).map((service, index) => (
+              <div key={index} className="flex justify-center">
+                <ServiceCard {...service} onNavigate={handleNavigation} />
+              </div>
+            ))}
+          </div>
       </div>
     </div>
   );

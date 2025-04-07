@@ -20,7 +20,6 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 function App() {
   return (
     <div className="min-h-screen overflow-x-hidden bg-gray-50 text-gray-800">
-      <Navbar />
 
       {/* <HeroSection />
       <ProblemSection />
@@ -28,9 +27,11 @@ function App() {
       <ServicesSection />
       <FeaturesSection />
       <SpeedSection /> */}
-
-
       <Router>
+
+
+        <Navbar />
+
         <Routes>
           <Route path="/" element={<MainPage />} />
           <Route path="/dispute-resolution" element={<DisputeResolution />} />
@@ -42,9 +43,13 @@ function App() {
           <Route path="/team" element={<Team />} />
           <Route path="/supervisor" element={<Supervisor />} />
         </Routes>
+
+
+        <Footer />
+
+
       </Router>
 
-      <Footer />
     </div>
   );
 }
