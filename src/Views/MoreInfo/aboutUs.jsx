@@ -166,19 +166,31 @@ const AboutUsSection = () => {
       {/* Problem & Solution Section - Adjusted padding to ensure no overlap with wave */}
       <div className="container mx-auto px-4 sm:px-8 lg:px-16 pt-20 pb-16">
         <div className="flex flex-col lg:flex-row items-start gap-10">
+
+
           {/* Left Section: Problems */}
-          <div className="w-full lg:w-1/2" data-aos="fade-right">
-            <h3 className="text-4xl font-semibold mb-8 relative">
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-red-500 to-orange-500">🛠️ Problem</span>
+
+          <div className="w-full lg:w-1/2">
+            <motion.h3
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ delay: 0.2, duration: 0.5 }}
+              className="text-4xl font-semibold mb-8 relative"
+            >
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-red-500 to-orange-500">
+                🛠️ Problem
+              </span>
               <div className="absolute -bottom-4 left-0 w-20 h-1 bg-gradient-to-r from-red-400 to-orange-400"></div>
-            </h3>
+            </motion.h3>
             <div className="space-y-6">
               {problems.map((problem, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: index * 0.1, duration: 0.5 }}
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true, amount: 0.2 }}
+                  transition={{ delay: 0 + index * 0.1, duration: 0.3 }}
                   whileHover={{ scale: 1.03 }}
                   className="relative group"
                 >
@@ -194,26 +206,39 @@ const AboutUsSection = () => {
             </div>
           </div>
 
+
           {/* Right Section: Solutions */}
-          <div className="w-full lg:w-1/2" data-aos="fade-left">
-            <h3 className="text-4xl font-semibold mb-8 relative">
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-green-500 to-blue-500">💡 GRYORK Solution</span>
+
+          <div className="w-full lg:w-1/2">
+            <motion.h3
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, amount: 0 }}
+              transition={{ delay: 0.2, duration: 0.5 }}
+              className="text-4xl font-semibold mb-8 relative"
+            >
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-green-500 to-blue-500">
+                💡 GRYORK Solution
+              </span>
               <div className="absolute -bottom-4 left-0 w-20 h-1 bg-gradient-to-r from-green-400 to-blue-400"></div>
-            </h3>
+            </motion.h3>
             <div className="space-y-6">
               {solutions.map((solution, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.3 + (index * 0.1), duration: 0.5 }}
+                  initial={{ opacity: 0, x: 20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true, amount: 0.2 }}
+                  transition={{ delay: 0 + index * 0.1, duration: 0.3 }}
                   whileHover={{ scale: 1.03 }}
                   className="relative group"
                 >
                   <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-green-400 to-blue-400 blur-sm group-hover:blur opacity-0 group-hover:opacity-70 transition-all duration-300"></div>
                   <Card className="shadow-lg relative bg-white rounded-xl overflow-hidden border-0">
                     <CardContent className="p-6">
-                      <h4 className="text-2xl font-semibold text-gray-800 mb-3">{solution.title}</h4>
+                      <h4 className="text-2xl font-semibold text-gray-800 mb-3">
+                        {solution.title}
+                      </h4>
                       <p className="text-gray-700 text-lg">{solution.description}</p>
                     </CardContent>
                   </Card>
@@ -221,6 +246,10 @@ const AboutUsSection = () => {
               ))}
             </div>
           </div>
+
+
+
+
         </div>
       </div>
     </div>
