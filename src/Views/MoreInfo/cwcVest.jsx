@@ -20,38 +20,40 @@ const CwcVestInfo = () => {
   };
 
   return (
-    <div className="w-full py-10 space-y-10">
-      <FeatureItem
-        icon={ShieldCheck}
-        title="Shield Against Payment"
-        description="Get funds when payments are delayed to maintain your operation's momentum"
-        reverse={false}
-      />
-      <FeatureItem
-        icon={Calendar}
-        title="Project Insurance"
-        description="Secure your business from risks and delays with our redefined protection"
-        reverse={true}
-      />
-      <FeatureItem
-        icon={Hourglass}
-        title="Working Capital Backup"
-        description="Bridge the gap when bills are approved but still unpaid, keeping your cash flow consistent"
-        reverse={false}
-      />
-      <FeatureItem
-        icon={FileText}
-        title="Secure Your Business"
-        description="Comprehensive protection for your business, just like you ensure your life"
-        reverse={true}
-      />
+    <div className="w-full py-10 space-y-10 bg-gradient-to-b from-white via-gray-50 to-gray-100 overflow-hidden">
+      {/* Feature Section */}
+      <div className="max-w-[95%] mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-x-6 gap-y-8">
+        <FeatureItem 
+          icon={ShieldCheck}
+          title="Shield Against Payment"
+          description="Get funds when payments are delayed to maintain your operation's momentum"
+          reverse={false}
+        />
+        <FeatureItem 
+          icon={Calendar}
+          title="Project Insurance"
+          description="Secure your business from risks and delays with our redefined protection"
+          reverse={true}
+        />
+        <FeatureItem 
+          icon={Hourglass}
+          title="Working Capital Backup"
+          description="Bridge the gap when bills are approved but still unpaid, keeping your cash flow consistent"
+          reverse={false}
+        />
+        <FeatureItem 
+          icon={FileText}
+          title="Secure Your Business"
+          description="Comprehensive protection for your business, just like you ensure your life"
+          reverse={true}
+        />
+      </div>
 
-      <br /><br />
-
+      {/* Learn More Section */}
       <div className="w-full text-center mt-16">
-        <p className="text-[60px] font-medium text-gray-700 mb-4">Explore more about CWC VEST</p>
+        <p className="text-4xl md:text-5xl font-bold text-gray-700 mb-6">Explore more about CWC VEST</p>
         <button 
-          className="bg-[#268044] hover:bg-green-800 transition-colors text-white text-[25px] px-6 py-2 rounded-[23px] px-20 mb-20"
+          className="bg-[#268044] hover:bg-green-800 transition-all duration-300 text-white text-xl md:text-2xl px-12 md:px-16 py-3 rounded-[23px] shadow-lg hover:shadow-xl"
           onClick={toggleDropdown}
         >
           {isOpen ? "show less" : "learn more"}

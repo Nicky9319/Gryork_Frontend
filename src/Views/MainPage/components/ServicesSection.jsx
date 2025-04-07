@@ -9,7 +9,7 @@ const ServiceCard = ({ title, icon, description, urlLink, onNavigate }) => {
         <img src={icon} alt={title} className="w-36 h-36 sm:w-28 sm:h-28" />
       </div>
       
-      <div className="w-full h-full rounded-full overflow-hidden relative shadow-md">
+      <div className="w-full h-full rounded-full overflow-hidden relative shadow-xl">
         <div className="before:content-[''] before:absolute before:top-0 before:left-0 before:w-full before:h-1/2 before:bg-white before:z-[1] after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-1/2 after:bg-[#268044] after:z-[1]">
           <div className="relative z-[2] w-full h-full flex flex-col justify-center items-center p-12 text-center">
             <br /><br />
@@ -22,7 +22,7 @@ const ServiceCard = ({ title, icon, description, urlLink, onNavigate }) => {
         </div>
       </div>
       
-      <a href={urlLink || "/"} onClick={(e) => onNavigate(urlLink || "/", e)} className="absolute -bottom-[25px] left-1/2 transform -translate-x-1/2 bg-[#CFF063] py-4 px-10 rounded-full text-black no-underline text-xl font-bold z-10 shadow-sm sm:text-lg sm:py-3 sm:px-8">
+      <a href={urlLink || "/"} onClick={(e) => onNavigate(urlLink || "/", e)} className="absolute -bottom-[25px] left-1/2 transform -translate-x-1/2 bg-[#CFF063] py-4 px-10 rounded-full text-black no-underline text-xl font-bold z-10 shadow-md sm:text-lg sm:py-3 sm:px-8">
         learn more
       </a>
     </div>
