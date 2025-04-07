@@ -4,10 +4,6 @@ import { Card, CardContent } from "../../components/ui/card";
 
 const solutions = [
   {
-    title: "AI-powered platform",
-    description: "Built for modern workforce management.",
-  },
-  {
     title: "CWC bill payment",
     description: "On-time worker payouts ensure financial stability.",
   },
@@ -18,6 +14,10 @@ const solutions = [
   {
     title: "Transparent systems",
     description: "Enable fair pricing and better negotiations.",
+  },
+  {
+    title: "AI-powered platform",
+    description: "Built for modern workforce management.",
   },
   {
     title: "Streamlined operations",
