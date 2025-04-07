@@ -26,9 +26,9 @@ const Navbar = () => {
           <div className="menu absolute top-full right-0 bg-white shadow-md p-4">
             <ul className="space-y-2">
               <li><a href="/" className="text-[#313234] no-underline">Home</a></li>
-              <li><a href="/services" className="text-[#313234] no-underline">Services</a></li>
-              <li><a href="/about" className="text-[#313234] no-underline">About</a></li>
-              <li><a href="/contact" className="text-[#313234] no-underline">Contact</a></li>
+              <li><a href="/about-us" className="text-[#313234] no-underline">About Us</a></li>
+              <li><a href="/dispute-resolution" className="text-[#313234] no-underline">Resolving Conflict</a></li>
+              <li><a href="/gryork-explained" className="text-[#313234] no-underline">Who Are We</a></li>
             </ul>
           </div>
         )}

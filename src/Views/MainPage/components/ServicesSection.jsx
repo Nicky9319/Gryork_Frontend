@@ -1,7 +1,7 @@
 import React from 'react';
 
 // Reusable Service Card component
-const ServiceCard = ({ title, icon, description }) => {
+const ServiceCard = ({ title, icon, description, urlLink }) => {
   return (
     <div className="relative w-[450px] h-[450px] flex flex-col items-center md:w-[380px] md:h-[380px] mb-8 sm:w-[300px] sm:h-[300px]">
       <div className="absolute -top-[55px] left-1/2 transform -translate-x-1/2 z-10" style={{ background: 'none' }}>
@@ -21,7 +21,7 @@ const ServiceCard = ({ title, icon, description }) => {
         </div>
       </div>
       
-      <a href="#" className="absolute -bottom-[25px] left-1/2 transform -translate-x-1/2 bg-[#CFF063] py-4 px-10 rounded-full text-black no-underline text-xl font-bold z-10 shadow-sm sm:text-lg sm:py-3 sm:px-8">
+      <a href={urlLink || "/"} className="absolute -bottom-[25px] left-1/2 transform -translate-x-1/2 bg-[#CFF063] py-4 px-10 rounded-full text-black no-underline text-xl font-bold z-10 shadow-sm sm:text-lg sm:py-3 sm:px-8">
         learn more
       </a>
     </div>
@@ -33,27 +33,32 @@ const ServicesSection = () => {
     {
       title: 'CWC',
       icon: '/src/Images/rupee (1).svg',
-      description: 'Short Term credit Solution for subcontractors'
+      description: 'Short Term credit Solution for subcontractors',
+      urlLink: '/cwc'
     },
     {
       title: 'CWC VEST',
       icon: '/src/Images/verified.svg',
-      description: 'Your projects\'s finance safety against payment delays'
+      description: 'Your projects\'s finance safety against payment delays',
+      urlLink: '/cwc-vest'
     },
     {
       title: 'SUPERVISOR',
       icon: '/src/Images/learning (1).svg',
-      description: 'An AI-powered tool that automate your workflow'
+      description: 'An AI-powered tool that automate your workflow',
+      urlLink: '/supervisor'
     },
     {
       title: 'TEAMS',
       icon: '/src/Images/hierarchy-structure.svg',
-      description: 'Build and grow a skilled work balance'
+      description: 'Build and grow a skilled work balance',
+      urlLink: '/team'
     },
     {
       title: 'GRYLINK',
       icon: '/src/Images/grylink.svg',
-      description: 'Smarter Credit Decisions. Seamless Integration'
+      description: 'Smarter Credit Decisions. Seamless Integration',
+      urlLink: '/grylink'
     }
   ];
 
