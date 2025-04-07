@@ -1,7 +1,11 @@
 import React, { useState, useEffect } from 'react';
+import useInView from '../../../hooks/useInView';
 
 const AIPoweredSection = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const headingAnimation = useInView({}, 200);
+  const imageAnimation = useInView({}, 400);
+  const contentAnimation = useInView({}, 600);
 
   useEffect(() => {
     const handleResize = () => {
@@ -17,10 +21,20 @@ const AIPoweredSection = () => {
       {windowWidth <= 640 ? (
         <>
           <div className="flex flex-row justify-between items-center mb-8">
-            <h1 className="font-bold text-gray-800 text-2xl leading-tight mr-4 w-3/5">
+            <h1 
+              ref={headingAnimation.ref}
+              className={`font-bold text-gray-800 text-2xl leading-tight mr-4 w-3/5 transition-all duration-1000 transform ${
+                headingAnimation.isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+              }`}
+            >
               AI-Powered Financing &amp; Workforce Management for the Infrastructure Industry
             </h1>
-            <div className="relative flex justify-center w-2/5">
+            <div 
+              ref={imageAnimation.ref}
+              className={`relative flex justify-center w-2/5 transition-all duration-1000 ${
+                imageAnimation.isInView ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
+              }`}
+            >
               <div
                 className="absolute bg-[#b6e026] rounded-full z-10"
                 style={{
@@ -46,7 +60,12 @@ const AIPoweredSection = () => {
             </div>
           </div>
           
-          <div className="mt-4">
+          <div 
+            ref={contentAnimation.ref}
+            className={`mt-4 transition-all duration-1000 transform ${
+              contentAnimation.isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+            }`}
+          >
             <p className="leading-relaxed text-gray-700 mb-6 text-base">
               Empowering subcontractors with smart credit solutions, real-time payments, and seamless workflow management.
             </p>
@@ -69,12 +88,22 @@ const AIPoweredSection = () => {
       ) : (
         <div className="flex flex-col md:flex-row justify-between items-center mb-8 gap-8">
           <div className="w-full md:w-1/2 mb-8 md:mb-0 text-center md:text-left md:pl-0 lg:pl-8">
-            <h1 className="font-bold text-gray-800 mb-4 leading-tight text-4xl sm:text-5xl md:text-6xl lg:text-7xl">
+            <h1 
+              ref={headingAnimation.ref}
+              className={`font-bold text-gray-800 mb-4 leading-tight text-4xl sm:text-5xl md:text-6xl lg:text-7xl transition-all duration-1000 transform ${
+                headingAnimation.isInView ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'
+              }`}
+            >
               AI-Powered<br />
               Financing &amp; Workforce Management for the Infrastructure Industry
             </h1>
 
-            <div className="w-full text-center md:text-left mt-6">
+            <div 
+              ref={contentAnimation.ref}
+              className={`w-full text-center md:text-left mt-6 transition-all duration-1000 transform ${
+                contentAnimation.isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+              }`}
+            >
               <p className="leading-relaxed text-gray-700 mb-6 text-lg md:text-xl">
                 Empowering subcontractors with smart credit solutions, real-time payments, and seamless workflow management.
               </p>
@@ -95,7 +124,12 @@ const AIPoweredSection = () => {
             </div>
           </div>
 
-          <div className="relative w-full md:w-1/2 flex justify-center">
+          <div 
+            ref={imageAnimation.ref}
+            className={`relative w-full md:w-1/2 flex justify-center transition-all duration-1000 transform ${
+              imageAnimation.isInView ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'
+            }`}
+          >
             <div
               className="absolute bg-[#268044] rounded-full z-10"
               style={{
