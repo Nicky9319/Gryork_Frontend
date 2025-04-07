@@ -129,15 +129,15 @@ const DisputeResolution = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.6 }}
-          className="bg-white shadow-xl rounded-xl p-8 -mt-20 border-l-8 border-purple-500"
+          className="bg-white shadow-xl rounded-xl p-4 sm:p-8 -mt-16 sm:-mt-20 border-l-4 sm:border-l-8 border-purple-500"
         >
-          <div className="flex items-start">
-            <div className="text-purple-500 mr-4">
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4 sm:gap-0">
+            <div className="text-purple-500 sm:mr-4">
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 sm:h-12 sm:w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z" />
               </svg>
             </div>
-            <p className="text-lg md:text-xl text-gray-800 italic font-medium">
+            <p className="text-base sm:text-lg md:text-xl text-gray-800 italic font-medium text-center sm:text-left">
               "Whether you're a subcontractor, worker, or industry professional, you can
               resolve conflicts efficiently and fairly—all within a trusted digital platform designed to
               protect your rights and bring you peace of mind."
