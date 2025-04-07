@@ -22,7 +22,7 @@ const AIPoweredSection = () => {
             </h1>
             <div className="relative flex justify-center w-2/5">
               <div
-                className="absolute bg-[#b6e026] rounded-full z-10"
+                className="absolute bg-[#268044] rounded-full z-10"
                 style={{
                   width: '28vw',
                   height: '28vw',
