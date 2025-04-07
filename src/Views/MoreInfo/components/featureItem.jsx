@@ -25,7 +25,7 @@ const FeatureItem = ({ icon: Icon, title, description, reverse, color, hoverColo
                     whileHover={{ y: -5 }}
                 >
                     {highlight && (
-                        <div className="absolute inset-0 bg-black bg-opacity-10"></div>
+                        <div className="absolute inset-0 bg-[2d9350] bg-opacity-10"></div>
                     )}
                     
                     <div className="absolute top-0 left-0 w-full h-full opacity-10">

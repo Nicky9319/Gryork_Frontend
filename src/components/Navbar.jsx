@@ -53,7 +53,7 @@ const Navbar = () => {
       </nav>
 
 
-      <div ref={menuRef} className={`menu-container absolute left-0 right-0 top-0 w-full bg-white z-20 transition-all duration-500 ${isMenuOpen ? 'opacity-100 translate-y-16' : 'opacity-0 -translate-y-full pointer-events-none'}`}>
+      {/* <div ref={menuRef} className={`menu-container absolute left-0 right-0 top-0 w-full bg-white z-20 transition-all duration-500 ${isMenuOpen ? 'opacity-100 translate-y-16' : 'opacity-0 -translate-y-full pointer-events-none'}`}>
         <div className="menu shadow-md py-2 px-6">
 
           <ul className="flex justify-center space-x-16 items-center">
@@ -63,9 +63,9 @@ const Navbar = () => {
             <li><a href="/gryork-explained" onClick={(e) => handleNavigation('/gryork-explained', e)} className="text-[#313234] no-underline hover:font-bold transition-all text-base px-1">Who Are We</a></li>
           </ul>
         </div>
-      </div>
+      </div> */}
 
-      {/* <div
+      <div
         ref={menuRef}
         className={`menu-container absolute left-1/2 transform -translate-x-1/2 top-0 w-auto bg-white z-20 transition-all duration-500 rounded-lg ${isMenuOpen ? 'opacity-100 translate-y-12' : 'opacity-0 -translate-y-full pointer-events-none'
           } shadow-lg border border-gray-200`}
@@ -119,7 +119,7 @@ const Navbar = () => {
 
 
 
-      </div> */}
+      </div>
 
     </div>
 

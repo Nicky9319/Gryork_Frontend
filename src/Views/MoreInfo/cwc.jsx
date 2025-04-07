@@ -157,8 +157,8 @@ const CWC = () => {
               title="Faster, Smarter Financing with AI"
               description="Leveraging technology for optimal financial solutions"
               reverse={false}
-              color="#268044"
-              hoverColor="#1a6330"
+              color="#2d9350"
+              hoverColor="#227a3e"
               highlight={true}
             />
           </motion.div>
