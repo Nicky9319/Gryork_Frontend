@@ -13,7 +13,7 @@ const ServiceCard = ({ title, icon, description, urlLink, onNavigate }) => {
         <div className="before:content-[''] before:absolute before:top-0 before:left-0 before:w-full before:h-1/2 before:bg-white before:z-[1] after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-1/2 after:bg-[#268044] after:z-[1]">
           <div className="relative z-[2] w-full h-full flex flex-col justify-center items-center p-12 text-center">
             <br /><br />
-            <h3 className="text-5xl font-bold uppercase z-[2] mb-3 mt-10 sm:text-4xl">{title}<w/h3>
+            <h3 className="text-5xl font-bold uppercase z-[2] mb-3 mt-10 sm:text-4xl">{title}</h3>
             <br />
             <p className="text-2xl leading-snug text-black z-[2] relative -top-[15%] md:text-xl sm:text-lg text-white">
               {description}
