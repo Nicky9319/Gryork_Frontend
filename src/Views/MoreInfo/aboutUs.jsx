@@ -56,14 +56,14 @@ const AboutUsSection = () => {
     script.src = 'https://unpkg.com/aos@next/dist/aos.js';
     script.async = true;
     document.body.appendChild(script);
-    
+
     script.onload = () => {
       window.AOS.init({
         duration: 800,
         once: false,
       });
     };
-    
+
     return () => {
       if (document.body.contains(script)) {
         document.body.removeChild(script);
@@ -79,33 +79,36 @@ const AboutUsSection = () => {
 
   return (
     <div className="w-full bg-gradient-to-b from-gray-100 to-white overflow-hidden">
-      {/* Hero Section */}
       <div className="relative w-full h-[50vh] bg-gradient-to-r from-green-800 to-green-600 overflow-hidden">
         <div className="absolute inset-0 bg-pattern bg-cover bg-center opacity-20"></div>
-        
+
         <div className="absolute top-0 left-0 w-32 h-32 bg-green-400 rounded-full filter blur-3xl opacity-20 animate-pulse"></div>
-        <div className="absolute bottom-0 right-0 w-64 h-64 bg-yellow-300 rounded-full filter blur-3xl opacity-20 animate-pulse" style={{animationDelay: '2s'}}></div>
-        
+        <div className="absolute bottom-0 right-0 w-64 h-64 bg-yellow-300 rounded-full filter blur-3xl opacity-20 animate-pulse" style={{ animationDelay: '2s' }}></div>
+
         <div className="container mx-auto h-full flex items-center px-4 sm:px-8 lg:px-16 relative z-10">
-          <motion.div 
+          <motion.div
             initial="hidden"
             animate="visible"
             variants={fadeIn}
             className="max-w-3xl"
           >
-            <h1 className="text-5xl md:text-7xl font-bold text-slate-200 mb-6 [text-shadow:_0_3px_5px_rgba(0,0,0,0.6)]">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-8 [text-shadow:_0_3px_5px_rgba(0,0,0,0.6)] ">
               About Us
             </h1>
-            <div className="w-32 h-2 bg-yellow-400 mb-8 rounded-full"></div>
-            <p className="text-xl md:text-2xl text-slate-300 leading-relaxed [text-shadow:_0_2px_4px_rgba(0,0,0,0.5)]">
-              GRYORK is transforming the infrastructure industry with innovative solutions to long-standing challenges.
-            </p>
+            <div className="w-32 h-2 bg-yellow-400 mb-15 rounded-full "></div>
+
+            <div className="bg-[#FFB22C]/90 rounded-lg px-4 py-3">
+              <p className="text-xl md:text-3xl text-[#000]">
+                GRYORK is transforming the infrastructure industry with innovative solutions to long-standing challenges.
+              </p>
+            </div>
+
           </motion.div>
         </div>
-        
+
         {/* Semi-transparent overlay for text readability extending below the wave */}
         <div className="absolute left-0 right-0 bottom-0 h-32 bg-gradient-to-b from-transparent to-gray-100 opacity-90"></div>
-        
+
         {/* Wave on top of semi-transparent overlay */}
         <div className="absolute bottom-0 left-0 w-full" style={{ transform: 'translateY(1px)' }}>
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" className="w-full h-auto" preserveAspectRatio="none">
