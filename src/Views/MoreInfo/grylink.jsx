@@ -11,6 +11,21 @@ const Grylink = () => {
     });
   }, []);
 
+  const fadeInUp = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
+  };
+
+  const staggerContainer = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2
+      }
+    }
+  };
+
   return (
     <div className="bg-gradient-to-b from-gray-50 to-gray-100 min-h-screen">
       {/* Hero Section with Improved Layout */}
@@ -66,19 +81,28 @@ const Grylink = () => {
       </section>
 
       {/* Features Section with Cards */}
-      <section id="features" className="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-        <div className="text-center mb-16">
+      <motion.section 
+        id="features" 
+        className="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+        variants={staggerContainer}
+      >
+        <motion.div 
+          className="text-center mb-16"
+          variants={fadeInUp}
+        >
           <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Key Features</h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             GRYLINK offers powerful tools to streamline your contractor management workflow.
           </p>
-        </div>
+        </motion.div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* Feature Card 1 */}
-          <div 
-            data-aos="fade-up" 
-            data-aos-delay="0"
+          <motion.div 
+            variants={fadeInUp}
             className="bg-white rounded-2xl shadow-lg overflow-hidden transform transition-all duration-300 hover:shadow-xl hover:-translate-y-2"
           >
             <div className="h-2 bg-blue-500"></div>
@@ -94,12 +118,11 @@ const Grylink = () => {
               </p>
 
             </div>
-          </div>
+          </motion.div>
 
           {/* Feature Card 2 */}
-          <div 
-            data-aos="fade-up" 
-            data-aos-delay="150"
+          <motion.div 
+            variants={fadeInUp}
             className="bg-white rounded-2xl shadow-lg overflow-hidden transform transition-all duration-300 hover:shadow-xl hover:-translate-y-2"
           >
             <div className="h-2 bg-green-500"></div>
@@ -114,12 +137,11 @@ const Grylink = () => {
                 Contractors can request credit through a simple digital form, sent directly to the company.
               </p>
             </div>
-          </div>
+          </motion.div>
 
           {/* Feature Card 3 */}
-          <div 
-            data-aos="fade-up" 
-            data-aos-delay="300"
+          <motion.div 
+            variants={fadeInUp}
             className="bg-white rounded-2xl shadow-lg overflow-hidden transform transition-all duration-300 hover:shadow-xl hover:-translate-y-2"
           >
             <div className="h-2 bg-purple-500"></div>
@@ -134,9 +156,9 @@ const Grylink = () => {
                 GRYLINK auto-analyzes past data and presents key insights to help companies make faster, data-driven decisions.
               </p>
             </div>
-          </div>
+          </motion.div>
         </div>
-      </section>
+      </motion.section>
 
 
     </div>
