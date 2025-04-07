@@ -11,6 +11,9 @@ import AboutUs from './Views/MoreInfo/aboutus';
 import GryorkExplained from './Views/MoreInfo/gryorkexplained';
 
 import CWC from './Views/MoreInfo/cwc';
+import CwcVestInfo from './Views/MoreInfo/cwcVest';
+import Team from './Views/MoreInfo/team';
+import Supervisor from './Views/MoreInfo/supervisor';
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
@@ -35,6 +38,9 @@ function App() {
           <Route path="/about-us" element={<AboutUs />} />
           <Route path="/gryork-explained" element={<GryorkExplained />} />
           <Route path="/cwc" element={<CWC/>}/>
+          <Route path="/cwc-vest" element={<CwcVestInfo />} />
+          <Route path="/team" element={<Team />} />
+          <Route path="/supervisor" element={<Supervisor />} />
         </Routes>
       </Router>
 
