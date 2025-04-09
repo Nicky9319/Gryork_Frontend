@@ -8,8 +8,9 @@ export default defineConfig(({ command, mode }) => {
   // Check if we need to use the GitHub Pages path prefix
   const useGitHubPages = process.env.USE_GITHUB_PAGES === 'true';
   const base = useGitHubPages ? '/Gryork_Frontend/' : '/';
-
+  
   return {
+    
     plugins: [react(), tailwindcss()],
     base: base,
     resolve: {
