@@ -6,10 +6,10 @@ import ScrollToTop from './components/ScrollToTop';
 
 import MainPage from './Views/MainPage/mainpage'
 
-import DisputeResolution from './Views/MoreInfo/disputeresolution';
+import DisputeResolution from './Views/MoreInfo/disputeResolution';
 import Grylink from './Views/MoreInfo/grylink';
-import AboutUs from './Views/MoreInfo/aboutus';
-import GryorkExplained from './Views/MoreInfo/gryorkexplained';
+import AboutUs from './Views/MoreInfo/aboutUs';
+import GryorkExplained from './Views/MoreInfo/gryorkExplained';
 
 import CWC from './Views/MoreInfo/cwc';
 import CwcVestInfo from './Views/MoreInfo/cwcVest';
