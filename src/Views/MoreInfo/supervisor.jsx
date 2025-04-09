@@ -89,8 +89,8 @@ const Supervisor = () => {
                                 title="Smart attendance management"
                                 description=""
                                 reverse={false}
-                                color="#268044"
-                                hoverColor="#1a6330"
+                                color="#2d9350"
+                                hoverColor="#227a3e"
                             />
                         </motion.div>
 
@@ -100,8 +100,8 @@ const Supervisor = () => {
                                 title="Seamless Buld Payments"
                                 description=""
                                 reverse={true}
-                                color="#206e3a"
-                                hoverColor="#175229"
+                                color="#2d9350"
+              hoverColor="#227a3e"
                             />
                         </motion.div>
 
@@ -112,7 +112,7 @@ const Supervisor = () => {
                                 description=""
                                 reverse={false}
                                 color="#2d9350"
-                                hoverColor="#227a3e"
+              hoverColor="#227a3e"
                             />
                         </motion.div>
 
@@ -122,8 +122,8 @@ const Supervisor = () => {
                                 title="AI Powered Growth Insights"
                                 description=""
                                 reverse={true}
-                                color="#268044"
-                                hoverColor="#1a6330"
+                                color="#2d9350"
+              hoverColor="#227a3e"
                             />
                         </motion.div>
 
@@ -133,8 +133,8 @@ const Supervisor = () => {
                                 title="Instant Team Communication"
                                 description=""
                                 reverse={false}
-                                color="#206e3a"
-                                hoverColor="#175229"
+                                color="#2d9350"
+              hoverColor="#227a3e"
                             />
                         </motion.div>
 
@@ -145,7 +145,7 @@ const Supervisor = () => {
                                 description=""
                                 reverse={true}
                                 color="#2d9350"
-                                hoverColor="#227a3e"
+              hoverColor="#227a3e"  
                             />
                         </motion.div>
 
@@ -155,8 +155,8 @@ const Supervisor = () => {
                                 title="More AI-Powered Features"
                                 description="Coming Soon !"
                                 reverse={false}
-                                color="#268044"
-                                hoverColor="#1a6330"
+                                color="#2d9350"
+              hoverColor="#227a3e"
                                 highlight={true}
                             />
                         </motion.div>
@@ -205,21 +205,21 @@ const Supervisor = () => {
                                         automates tasks, and brings your entire workflow to your fingertips!
                                     </p>
                                 </div>
-                                
+
                                 <div className="flex items-start gap-5 bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all duration-300">
                                     <span className="text-[#268044] text-3xl pt-1">•</span>
                                     <p className="text-xl leading-relaxed">
                                         <span className="font-semibold text-[#3c996a]">Smart Attendance Management</span> – Digitally track and manage worker attendance with automated reports and insights.
                                     </p>
                                 </div>
-                                
+
                                 <div className="flex items-start gap-5 bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all duration-300">
                                     <span className="text-[#268044] text-3xl pt-1">•</span>
                                     <p className="text-xl leading-relaxed">
                                         <span className="font-semibold text-[#3c996a]">Seamless Bulk Payments</span> – Process multiple payments at once, saving time and reducing administrative overhead.
                                     </p>
                                 </div>
-                                
+
                                 <div className="flex items-start gap-5 bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all duration-300">
                                     <span className="text-[#268044] text-3xl pt-1">•</span>
                                     <p className="text-xl leading-relaxed">
@@ -227,7 +227,7 @@ const Supervisor = () => {
                                     </p>
                                 </div>
                             </div>
-                            
+
                             <div className="flex-1 space-y-8">
                                 <div className="flex items-start gap-5 bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all duration-300">
                                     <span className="text-[#268044] text-3xl pt-1">•</span>
@@ -235,21 +235,21 @@ const Supervisor = () => {
                                         <span className="font-semibold text-[#3c996a]">AI Growth Insights</span> – Get AI-driven monitoring of your workers' progress and development.
                                     </p>
                                 </div>
-                                
+
                                 <div className="flex items-start gap-5 bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all duration-300">
                                     <span className="text-[#268044] text-3xl pt-1">•</span>
                                     <p className="text-xl leading-relaxed">
                                         <span className="font-semibold text-[#3c996a]">Instant Team Communication</span> – Broadcast messages and create a seamless channel between contractors and workers for efficient collaboration.
                                     </p>
                                 </div>
-                                
+
                                 <div className="flex items-start gap-5 bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all duration-300">
                                     <span className="text-[#268044] text-3xl pt-1">•</span>
                                     <p className="text-xl leading-relaxed">
                                         <span className="font-semibold text-[#3c996a]">Secure Digital Document Hub</span> – Store and access all essential documents in one secure location.
                                     </p>
                                 </div>
-                                
+
                                 <div className="flex items-start gap-5 bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all duration-300">
                                     <span className="text-[#268044] text-3xl pt-1">•</span>
                                     <p className="text-xl leading-relaxed">

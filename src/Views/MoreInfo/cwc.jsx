@@ -91,8 +91,8 @@ const CWC = () => {
               title="AI-powered Credit Approval"
               description="Quick approvals using advanced algorithms"
               reverse={false}
-              color="#268044"
-              hoverColor="#1a6330"
+              color="#2d9350"
+              hoverColor="#227a3e"
             />
           </motion.div>
           
@@ -102,8 +102,8 @@ const CWC = () => {
               title="Direct Payments to Workers"
               description="Ensuring timely wages through secure transfers"
               reverse={true}
-              color="#206e3a"
-              hoverColor="#175229"
+              color="#2d9350"
+              hoverColor="#227a3e"
             />
           </motion.div>
           
@@ -124,8 +124,8 @@ const CWC = () => {
               title="Smart Interest Optimisation"
               description="AI-driven models to reduce costs"
               reverse={true}
-              color="#268044"
-              hoverColor="#1a6330"
+              color="#2d9350"
+              hoverColor="#227a3e"
             />
           </motion.div>
           
@@ -135,8 +135,8 @@ const CWC = () => {
               title="NBFC & Bank Collaboration"
               description="Strong partnerships for better financing"
               reverse={false}
-              color="#206e3a"
-              hoverColor="#175229"
+              color="#2d9350"
+              hoverColor="#227a3e"
             />
           </motion.div>
           

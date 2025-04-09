@@ -96,8 +96,8 @@ export default function Team() {
               title="Connect & Grow"
               description="Form your own Skill Team"
               reverse={false}
-              color="#268044"
-              hoverColor="#1a6330"
+              color="#2d9350"
+              hoverColor="#227a3e"
             />
           </motion.div>
 
@@ -107,8 +107,8 @@ export default function Team() {
               title="Join & Succeed"
               description="No Team? Join one Instantly"
               reverse={true}
-              color="#206e3a"
-              hoverColor="#175229"
+              color="#2d9350"
+              hoverColor="#227a3e"
             />
           </motion.div>
 
@@ -129,8 +129,8 @@ export default function Team() {
               title="Multiply your Income"
               description="Take Better projects & earn 5x with your team"
               reverse={true}
-              color="#268044"
-              hoverColor="#1a6330"
+              color="#2d9350"
+              hoverColor="#227a3e"
             />
           </motion.div>
 
@@ -140,8 +140,8 @@ export default function Team() {
               title="Explore without Limits"
               description="Go Beyond your local sites"
               reverse={false}
-              color="#268044"
-              hoverColor="#1a6330"
+              color="#2d9350"
+              hoverColor="#227a3e"
               highlight={true}
             />
           </motion.div>

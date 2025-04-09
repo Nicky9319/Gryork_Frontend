@@ -92,8 +92,8 @@ const CwcVestInfo = () => {
                 title="Shield against Payment Delays"
                 description="Get Funds when Payments are Delayed"
                 reverse={false}
-                color="#268044"
-                hoverColor="#1a6330"
+                color="#2d9350"
+              hoverColor="#227a3e"
               />
             </motion.div>
 
@@ -103,8 +103,8 @@ const CwcVestInfo = () => {
                 title="Project Insurance"
                 description="Secure your business against project delays"
                 reverse={true}
-                color="#206e3a"
-                hoverColor="#175229"
+                color="#2d9350"
+              hoverColor="#227a3e"
               />
             </motion.div>
 
@@ -115,7 +115,7 @@ const CwcVestInfo = () => {
                 description="Bridge the gap when bills are approved but not paid"
                 reverse={false}
                 color="#2d9350"
-                hoverColor="#227a3e"
+              hoverColor="#227a3e"
               />
             </motion.div>
 
@@ -125,8 +125,8 @@ const CwcVestInfo = () => {
                 title="Secure Your Business"
                 description="Ensure your business is safe in hard times"
                 reverse={true}
-                color="#268044"
-                hoverColor="#1a6330"
+                color="#2d9350"
+              hoverColor="#227a3e"
               />
             </motion.div>
 
