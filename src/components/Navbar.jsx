@@ -52,74 +52,55 @@ const Navbar = () => {
         </div>
       </nav>
 
-
-      <div ref={menuRef} className={`menu-container absolute left-0 right-0 top-0 w-full bg-white z-20 transition-all duration-500 ${isMenuOpen ? 'opacity-100 translate-y-16' : 'opacity-0 -translate-y-full pointer-events-none'}`}>
-        <div className="menu shadow-md py-2 px-6">
-
-          <ul className="flex justify-center space-x-16 items-center">
-            <li><a href="/" onClick={(e) => handleNavigation('/', e)} className="text-[#313234] no-underline hover:font-bold transition-all text-base px-1">Home</a></li>
-            <li><a href="/about-us" onClick={(e) => handleNavigation('/about-us', e)} className="text-[#313234] no-underline hover:font-bold transition-all text-base px-1">About Us</a></li>
-            <li><a href="/dispute-resolution" onClick={(e) => handleNavigation('/dispute-resolution', e)} className="text-[#313234] no-underline hover:font-bold transition-all text-base px-1">Resolving Conflict</a></li>
-            <li><a href="/gryork-explained" onClick={(e) => handleNavigation('/gryork-explained', e)} className="text-[#313234] no-underline hover:font-bold transition-all text-base px-1">Who Are We</a></li>
-          </ul>
-        </div>
-      </div>
-
-      {/* <div
+      <div
         ref={menuRef}
         className={`menu-container absolute left-1/2 transform -translate-x-1/2 top-0 w-auto bg-white z-20 transition-all duration-500 rounded-lg ${isMenuOpen ? 'opacity-100 translate-y-12' : 'opacity-0 -translate-y-full pointer-events-none'
-          } shadow-lg border border-gray-200`}
+          } shadow-lg border border-gray-200 md:w-auto w-[90%]`}
       >
         <div className="menu py-2 px-6 rounded-lg">
-          <ul className="flex justify-center items-center">
-            <li>
+          <ul className="flex md:flex-row flex-col justify-center items-center">
+            <li className="md:mb-0 mb-4">
               <a
                 href="/"
                 onClick={(e) => handleNavigation('/', e)}
-                className="text-[#313234] no-underline hover:font-bold transition-all text-base px-4"
+                className="text-[#313234] no-underline hover:font-bold hover:text-black transition-all text-base px-4 whitespace-nowrap"
               >
                 Home
               </a>
             </li>
-            <li className="h-5 w-px bg-gray-300"></li>
-            <li>
+            <li className="md:block hidden h-5 w-px bg-gray-300"></li>
+            <li className="md:mb-0 mb-4">
               <a
                 href="/gryork-explained"
                 onClick={(e) => handleNavigation('/gryork-explained', e)}
-                className="text-[#313234] no-underline hover:font-bold transition-all text-base px-4"
+                className="text-[#313234] no-underline hover:font-bold hover:text-black transition-all text-base px-4 whitespace-nowrap"
               >
                 Who Are We
               </a>
             </li>
-            <li className="h-5 w-px bg-gray-300"></li>
-            <li>
+            <li className="md:block hidden h-5 w-px bg-gray-300"></li>
+            <li className="md:mb-0 mb-4">
               <a
                 href="/about-us"
                 onClick={(e) => handleNavigation('/about-us', e)}
-                className="text-[#313234] no-underline hover:font-bold transition-all text-base px-4"
+                className="text-[#313234] no-underline hover:font-bold hover:text-black transition-all text-base px-4 whitespace-nowrap"
               >
                 About Us
               </a>
             </li>
-            <li className="h-5 w-px bg-gray-300"></li>
-            <li>
+            <li className="md:block hidden h-5 w-px bg-gray-300"></li>
+            <li className="md:mb-0 mb-4">
               <a
                 href="/dispute-resolution"
                 onClick={(e) => handleNavigation('/dispute-resolution', e)}
-                className="text-[#313234] no-underline hover:font-bold transition-all text-base px-4"
+                className="text-[#313234] no-underline hover:font-bold hover:text-black transition-all text-base px-4 whitespace-nowrap"
               >
                 Resolving Conflict
               </a>
             </li>
           </ul>
         </div>
-
-
-
-
-
-
-      </div> */}
+      </div>
 
     </div>
 
