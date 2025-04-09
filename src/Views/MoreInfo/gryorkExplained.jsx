@@ -82,9 +82,9 @@ export default function GryorkExplanation() {
   };
 
   return (
-    <div className="w-full bg-gradient-to-b from-gray-100 to-white overflow-hidden">
+    <div className="w-full bg-white overflow-hidden">
       {/* Hero Section */}
-      <div className="relative w-full h-[50vh] bg-gradient-to-r from-green-700 to-green-500 overflow-hidden">
+      <div className="relative w-full h-[50vh] bg-green-600 overflow-hidden">
         {/* <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1589939705384-5185137a7f0f')] bg-cover bg-center opacity-20"></div> */}
         <div className="absolute inset-0 bg-pattern bg-cover bg-center opacity-20"></div>
 
@@ -138,9 +138,9 @@ export default function GryorkExplanation() {
 
 
         {/* Semi-transparent overlay for text readability extending below the wave */}
-        <div className="absolute left-0 right-0 bottom-0 h-32 bg-gradient-to-b from-transparent to-gray-100 opacity-90"></div>
+        <div className="absolute left-0 right-0 botto</div>m-0 h-32 bg-gradient-to-b from-transparent to-gray-100 opacity-90"></div>
 
-        {/* Wave on top of semi-transparent overlay */}
+        {/* Wave on top of semi-transparent overlay </svg>*/}
         <div className="absolute bottom-0 left-0 w-full" style={{ transform: 'translateY(1px)' }}>
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" className="w-full h-auto" preserveAspectRatio="none">
             <path fill={isDesktop ? "#E6E8EC" : "#f3f4f6"} fillOpacity="1" d="M0,160L48,165.3C96,171,192,181,288,186.7C384,192,480,192,576,170.7C672,149,768,107,864,90.7C960,75,1056,85,1152,112C1248,139,1344,181,1392,202.7L1440,224L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
@@ -158,7 +158,7 @@ export default function GryorkExplanation() {
         >
           <h2 className="text-3xl md:text-5xl font-bold mb-6 relative inline-block">
             <span className="text-green-600">How We Make It Happen</span>
-            <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-to-r from-green-400 to-blue-400"></div>
+            <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-green-400"></div>
           </h2>
           <p className="text-xl text-gray-700 max-w-3xl mx-auto">
             Here's how we make it happen with innovative solutions and cutting-edge technology.
@@ -180,7 +180,7 @@ export default function GryorkExplanation() {
               <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-green-400 to-blue-400 blur-sm group-hover:blur opacity-0 group-hover:opacity-70 transition-all duration-300"></div>
               <Card className="shadow-xl relative bg-white rounded-xl overflow-hidden border-0 h-full">
                 <CardContent className="p-8">
-                  <div className="bg-gradient-to-r from-green-500 to-blue-500 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                  <div className="bg-green-500 w-16 h-16 rounded-full flex items-center justify-center mb-6">
                     {React.cloneElement(feature.icon, { className: "w-8 h-8 text-white" })}
                   </div>
                   <h3 className="text-2xl font-bold text-gray-800 mb-4">{feature.title}</h3>
