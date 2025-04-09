@@ -42,7 +42,7 @@ const CWC = () => {
       {/* Hero Section with Animation */}
       <motion.div 
         initial="hidden"
-        animate="visible"
+        animate="visible"  // Changed back to animate for initial visibility
         variants={fadeInUp}
         className="max-w-[90%] mx-auto px-4 sm:px-6 lg:px-8 py-12 text-center"
       >
@@ -72,7 +72,7 @@ const CWC = () => {
       <motion.div 
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, amount: 0.2 }}
+        viewport={{ once: true }} // Changed from { once: true, amount: 0.2 } to match cwcVest
         variants={staggerContainer}
         className="max-w-[95%] mx-auto px-4 sm:px-6 lg:px-8 mb-12"
       >

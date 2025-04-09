@@ -2,6 +2,7 @@ import React from 'react';
 
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import ScrollToTop from './components/ScrollToTop';
 
 import MainPage from './Views/MainPage/mainpage'
 
@@ -20,16 +21,8 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 function App() {
   return (
     <div className="min-h-screen overflow-x-hidden bg-gray-50 text-gray-800">
-
-      {/* <HeroSection />
-      <ProblemSection />
-      <AIPoweredSection />
-      <ServicesSection />
-      <FeaturesSection />
-      <SpeedSection /> */}
       <Router>
-
-
+        <ScrollToTop />
         <Navbar />
 
         <Routes>
@@ -44,12 +37,8 @@ function App() {
           <Route path="/supervisor" element={<Supervisor />} />
         </Routes>
 
-
         <Footer />
-
-
       </Router>
-
     </div>
   );
 }

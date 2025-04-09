@@ -186,164 +186,114 @@ const Supervisor = () => {
                     </div>
                 </motion.div>
 
-
+                {/* Animated Dropdown Section - Updated to match team.jsx design */}
                 <div
-                    className="overflow-hidden transition-all duration-500 ease-in-out mb-20"
-                    style={{ height: height, opacity: height ? '1' : '0', marginTop: height ? '2rem' : '0' }}
+                    className="overflow-hidden transition-all duration-500 ease-in-out mb-16"
+                    style={{ height: `${height}px` }}
                 >
-                    <div ref={contentRef} className="bg-gradient-to-b from-white via-gray-50 to-white py-16 px-12 w-full max-w-[1440px] mx-auto rounded-3xl shadow-2xl font-sans text-gray-800">
-                        <h1 className="text-4xl lg:text-5xl font-bold text-center text-gray-900 mb-12 leading-tight">
+                    <div ref={contentRef} className="bg-gradient-to-b from-white via-gray-50 to-white py-16 px-12 w-full max-w-[1440px] mx-auto rounded-3xl shadow-2xl font-sans text-gray-800 border border-gray-100">
+                        <motion.h2
+                            initial="hidden"
+                            whileInView="visible"
+                            variants={fadeInUp}
+                            className="text-4xl lg:text-5xl font-bold text-center text-gray-900 mb-12 leading-tight"
+                        >
                             SuperVisor by <span className="text-blue-600">Gryork</span> – Smart Management Platform
-                        </h1>
+                        </motion.h2>
 
-                        <ul className="space-y-10">
-                            <li className="flex items-start gap-5">
-                                <span className="text-green-500 text-3xl pt-1">•</span>
-                                <p className="text-xl leading-relaxed">
-                                    Gryork's SuperVisor offers a comprehensive management solution for contractors and businesses,
-                                    streamlining operations and enhancing productivity through AI-powered tools.
-                                </p>
-                            </li>
-
-                            <li className="flex items-start gap-5">
-                                <span className="text-green-500 text-3xl pt-1">•</span>
-                                <p className="text-xl leading-relaxed">
-                                    <span className="font-semibold text-yellow-600">Smart Attendance Management</span> – Digitally track and manage worker attendance with automated reports and insights.
-                                </p>
-                            </li>
-
-                            <li className="flex items-start gap-5">
-                                <span className="text-green-500 text-3xl pt-1">•</span>
-                                <p className="text-xl leading-relaxed">
-                                    <span className="font-semibold text-yellow-600">Seamless Bulk Payments</span> – Process multiple payments at once, saving time and reducing administrative overhead.
-                                </p>
-                            </li>
-
-                            <li className="flex items-start gap-5">
-                                <span className="text-green-500 text-3xl pt-1">•</span>
-                                <p className="text-xl leading-relaxed">
-                                    <span className="font-semibold text-yellow-600">Real-time Bill Tracker</span> – Instantly view and manage bill statuses, ensuring financial clarity and improved cash flow management.
-                                </p>
-                            </li>
-
-                            <li className="flex items-start gap-5">
-                                <span className="text-green-500 text-3xl pt-1">•</span>
-                                <p className="text-xl leading-relaxed">
-                                    <span className="font-semibold text-yellow-600">AI-powered Growth Insights</span> – Leverage data analytics to identify trends, opportunities, and areas for improvement in your business.
-                                </p>
-                            </li>
-
-                            <li className="flex items-start gap-5">
-                                <span className="text-green-500 text-3xl pt-1">•</span>
-                                <p className="text-xl leading-relaxed">
-                                    <span className="font-semibold text-yellow-600">Instant Team Communication</span> – Keep your entire team connected with built-in messaging and notification systems.
-                                </p>
-                            </li>
-
-                            <li className="flex items-start gap-5">
-                                <span className="text-green-500 text-3xl pt-1">•</span>
-                                <p className="text-xl leading-relaxed">
-                                    <span className="font-semibold text-yellow-600">Secure Digital Document Hub</span> – Store, organize, and access important documents in one centralized, secure location.
-                                </p>
-                            </li>
-
-                            <li className="flex items-start gap-5">
-                                <span className="text-green-500 text-3xl pt-1">•</span>
-                                <p className="text-xl leading-relaxed">
-                                    With continuous AI-driven improvements and new features on the horizon, SuperVisor evolves with your business needs!
-                                </p>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-
-
-
-                <div
-                    className="overflow-hidden transition-all duration-500 ease-in-out mb-20"
-                    style={{ height: height, opacity: height ? '1' : '0', marginTop: height ? '2rem' : '0' }}
-                >
-                    <div ref={contentRef} className="bg-gradient-to-b from-white via-gray-50 to-white py-16 px-12 w-full max-w-[1440px] mx-auto rounded-3xl shadow-2xl font-sans text-gray-800">
-                        <h1 className="text-4xl lg:text-5xl font-bold text-center text-gray-900 mb-12 leading-tight">
-                            SuperVisor by <span className="text-blue-600">Gryork</span> – Smart Management Platform
-                        </h1>
-
-                        <div className="text-xl leading-relaxed max-w-5xl mx-auto text-center text-gray-700 mb-12">
+                        <motion.div
+                            initial="hidden"
+                            whileInView="visible"
+                            variants={fadeInUp}
+                            className="text-xl leading-relaxed max-w-5xl mx-auto text-center text-gray-700 mb-10"
+                        >
                             <p>
                                 <span className="font-semibold text-gray-900">
                                     "Work smarter with GRYORK – featuring SUPERVISOR, the AI-powered tool designed for subcontractors that replaces paperwork,
                                     automates tasks, and brings your entire workflow to your fingertips!"
                                 </span>
                             </p>
-                        </div>
+                        </motion.div>
 
-                        <ul className="space-y-10 max-w-5xl mx-auto">
-                            <li className="flex items-start gap-5">
-                                <span className="text-green-500 text-3xl pt-1">•</span>
-                                <p className="text-xl leading-relaxed">
-                                    Gryork's SuperVisor offers a comprehensive management solution for contractors and businesses,
-                                    streamlining operations and enhancing productivity through AI-powered tools.
-                                </p>
-                            </li>
+                        <motion.h3
+                            initial="hidden"
+                            whileInView="visible"
+                            variants={fadeInUp}
+                            className="text-2xl font-semibold text-center text-blue-600 mb-12"
+                        >
+                            Streamline Operations & Enhance Productivity through AI-powered Tools
+                        </motion.h3>
 
-                            <li className="flex items-start gap-5">
-                                <span className="text-green-500 text-3xl pt-1">•</span>
-                                <p className="text-xl leading-relaxed">
-                                    <span className="font-semibold text-yellow-600">Smart Attendance Management</span> – Digitally track and manage worker attendance with automated reports and insights.
-                                </p>
-                            </li>
+                        <motion.div
+                            initial="hidden"
+                            whileInView="visible"
+                            variants={staggerContainer}
+                            className="flex flex-col lg:flex-row gap-10"
+                        >
+                            <div className="flex-1 space-y-10">
+                                <motion.div variants={fadeInUp} className="flex items-start gap-5">
+                                    <span className="text-green-500 text-3xl pt-1">•</span>
+                                    <p className="text-xl text-gray-700 leading-relaxed">
+                                        <span className="font-semibold text-yellow-600">Smart Attendance Management –</span> Digitally track and manage worker attendance with automated reports and insights.
+                                    </p>
+                                </motion.div>
 
-                            <li className="flex items-start gap-5">
-                                <span className="text-green-500 text-3xl pt-1">•</span>
-                                <p className="text-xl leading-relaxed">
-                                    <span className="font-semibold text-yellow-600">Seamless Bulk Payments</span> – Process multiple payments at once, saving time and reducing administrative overhead.
-                                </p>
-                            </li>
+                                <motion.div variants={fadeInUp} className="flex items-start gap-5">
+                                    <span className="text-green-500 text-3xl pt-1">•</span>
+                                    <p className="text-xl text-gray-700 leading-relaxed">
+                                        <span className="font-semibold text-yellow-600">Seamless Bulk Payments –</span> Process multiple payments at once, saving time and reducing administrative overhead.
+                                    </p>
+                                </motion.div>
 
-                            <li className="flex items-start gap-5">
-                                <span className="text-green-500 text-3xl pt-1">•</span>
-                                <p className="text-xl leading-relaxed">
-                                    <span className="font-semibold text-yellow-600">Real-time Bill Tracker</span> – Instantly view and manage bill statuses, ensuring financial clarity and improved cash flow management.
-                                </p>
-                            </li>
+                                <motion.div variants={fadeInUp} className="flex items-start gap-5">
+                                    <span className="text-green-500 text-3xl pt-1">•</span>
+                                    <p className="text-xl text-gray-700 leading-relaxed">
+                                        <span className="font-semibold text-yellow-600">Real-time Bill Tracker –</span> Instantly view and manage bill statuses, ensuring financial clarity and improved cash flow management.
+                                    </p>
+                                </motion.div>
 
-                            <li className="flex items-start gap-5">
-                                <span className="text-green-500 text-3xl pt-1">•</span>
-                                <p className="text-xl leading-relaxed">
-                                    <span className="font-semibold text-yellow-600">AI Growth Insights</span> – Get AI-driven monitoring of your workers' progress and development.
-                                </p>
-                            </li>
+                                <motion.div variants={fadeInUp} className="flex items-start gap-5">
+                                    <span className="text-green-500 text-3xl pt-1">•</span>
+                                    <p className="text-xl text-gray-700 leading-relaxed">
+                                        <span className="font-semibold text-yellow-600">AI Growth Insights –</span> Get AI-driven monitoring of your workers' progress and development.
+                                    </p>
+                                </motion.div>
+                            </div>
 
-                            <li className="flex items-start gap-5">
-                                <span className="text-green-500 text-3xl pt-1">•</span>
-                                <p className="text-xl leading-relaxed">
-                                    <span className="font-semibold text-yellow-600">Instant Team Communication</span> – Broadcast messages and create a seamless channel between contractors and workers for efficient collaboration.
-                                </p>
-                            </li>
+                            <div className="flex-1 space-y-10">
+                                <motion.div variants={fadeInUp} className="flex items-start gap-5">
+                                    <span className="text-green-500 text-3xl pt-1">•</span>
+                                    <p className="text-xl text-gray-700 leading-relaxed">
+                                        <span className="font-semibold text-yellow-600">Instant Team Communication –</span> Broadcast messages and create a seamless channel between contractors and workers for efficient collaboration.
+                                    </p>
+                                </motion.div>
 
-                            <li className="flex items-start gap-5">
-                                <span className="text-green-500 text-3xl pt-1">•</span>
-                                <p className="text-xl leading-relaxed">
-                                    <span className="font-semibold text-yellow-600">Secure Digital Document Hub</span> – Store and access all essential documents in one secure location.
-                                </p>
-                            </li>
+                                <motion.div variants={fadeInUp} className="flex items-start gap-5">
+                                    <span className="text-green-500 text-3xl pt-1">•</span>
+                                    <p className="text-xl text-gray-700 leading-relaxed">
+                                        <span className="font-semibold text-yellow-600">Secure Digital Document Hub –</span> Store and access all essential documents in one secure location.
+                                    </p>
+                                </motion.div>
 
-                            <li className="flex items-start gap-5">
-                                <span className="text-green-500 text-3xl pt-1">•</span>
-                                <p className="text-xl leading-relaxed">
-                                    With continuous AI-driven improvements and new features on the horizon, SuperVisor evolves with your business needs!
-                                    <br />
-                                    <span className="italic text-gray-600">And this is just the beginning—stay tuned for more powerful updates!</span>
-                                </p>
-                            </li>
-                        </ul>
+                                <motion.div variants={fadeInUp} className="flex items-start gap-5">
+                                    <span className="text-green-500 text-3xl pt-1">•</span>
+                                    <p className="text-xl text-gray-700 leading-relaxed">
+                                        With continuous AI-driven improvements and new features on the horizon, SuperVisor evolves with your business needs!
+                                    </p>
+                                </motion.div>
+                            </div>
+                        </motion.div>
+
+                        <motion.p
+                            initial="hidden"
+                            whileInView="visible"
+                            variants={fadeInUp}
+                            className="text-center text-xl text-blue-700 font-semibold mt-12"
+                        >
+                            And this is just the beginning—stay tuned for more powerful updates!
+                        </motion.p>
                     </div>
                 </div>
-
-
-
-
             </div>
         </>
     );
