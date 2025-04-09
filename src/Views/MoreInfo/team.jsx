@@ -173,103 +173,72 @@ export default function Team() {
         </div>
       </motion.div>
 
-      {/* Animated Dropdown Section */}
+      {/* Animated Dropdown Section - Updated to match cwc.jsx design */}
       <div
         className="overflow-hidden transition-all duration-500 ease-in-out mb-16"
         style={{ height: `${height}px` }}
       >
-        <div ref={contentRef} className="bg-gradient-to-b from-white via-gray-50 to-white py-16 px-12 w-full max-w-[1440px] mx-auto rounded-3xl shadow-2xl font-sans text-gray-800 border border-gray-100">
-          <motion.h2
-            initial="hidden"
-            whileInView="visible"
-            variants={fadeInUp}
-            className="text-4xl lg:text-5xl font-bold text-center text-gray-900 mb-12 leading-tight"
-          >
-            Introducing Team by <span className="text-blue-600">Gryork</span> – Building Your Skilled Workforce
-          </motion.h2>
+        <div ref={contentRef} className="bg-gradient-to-b from-white via-gray-50 to-white py-12 px-4 md:px-8 w-full max-w-[98%] mx-auto rounded-3xl shadow-2xl font-sans text-gray-800 border border-gray-100">
+          <h1 className="text-3xl lg:text-4xl font-bold text-center text-gray-900 mb-10 leading-tight">
+            Team by <span className="text-[#268044]">Gryork</span> – Building Your Skilled Workforce
+          </h1>
 
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            variants={fadeInUp}
-            className="text-xl leading-relaxed max-w-5xl mx-auto text-center text-gray-700 mb-10"
-          >
-            <p>
-              <span className="font-semibold text-gray-900">
-                Build a skilled workforce, deliver top-quality work, and unlock new opportunities with ease!
-              </span>
-            </p>
-          </motion.div>
-
-          <motion.h3
-            initial="hidden"
-            whileInView="visible"
-            variants={fadeInUp}
-            className="text-2xl font-semibold text-center text-blue-600 mb-12"
-          >
-            Build Your Skilled Workforce & Unlock Limitless Opportunities
-          </motion.h3>
-
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            variants={staggerContainer}
-            className="flex flex-col lg:flex-row gap-10"
-          >
-            <div className="flex-1 space-y-10">
-              <motion.div variants={fadeInUp} className="flex items-start gap-5">
-                <span className="text-green-500 text-3xl pt-1">•</span>
-                <p className="text-xl text-gray-700 leading-relaxed">
-                  <span className="font-semibold text-yellow-600">Connect & Grow –</span> Bring skilled workers together, create your own team, and discover work that matches your expertise while opening doors to new opportunities.
+          <div className="flex flex-col lg:flex-row gap-8">
+            <div className="flex-1 space-y-8">
+              <div className="flex items-start gap-5 bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all duration-300">
+                <span className="text-[#268044] text-3xl pt-1">•</span>
+                <p className="text-xl leading-relaxed">
+                  Build a skilled workforce, deliver top-quality work, and unlock new opportunities with ease!
                 </p>
-              </motion.div>
-
-              <motion.div variants={fadeInUp} className="flex items-start gap-5">
-                <span className="text-green-500 text-3xl pt-1">•</span>
-                <p className="text-xl text-gray-700 leading-relaxed">
-                  <span className="font-semibold text-yellow-600">Join & Succeed –</span> Join existing teams, collaborate on projects, and gain hands-on experience.
+              </div>
+              
+              <div className="flex items-start gap-5 bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all duration-300">
+                <span className="text-[#268044] text-3xl pt-1">•</span>
+                <p className="text-xl leading-relaxed">
+                  <span className="font-semibold text-[#3c996a]">Connect & Grow</span> – Bring skilled workers together, create your own team, and discover work that matches your expertise while opening doors to new opportunities.
                 </p>
-              </motion.div>
-
-              <motion.div variants={fadeInUp} className="flex items-start gap-5">
-                <span className="text-green-500 text-3xl pt-1">•</span>
-                <p className="text-xl text-gray-700 leading-relaxed">
-                  <span className="font-semibold text-yellow-600">Form, Learn, Shine –</span> Start as a worker, evolve into a leader, and eventually become a job provider.
+              </div>
+              
+              <div className="flex items-start gap-5 bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all duration-300">
+                <span className="text-[#268044] text-3xl pt-1">•</span>
+                <p className="text-xl leading-relaxed">
+                  <span className="font-semibold text-[#3c996a]">Join & Succeed</span> – Join existing teams, collaborate on projects, and gain hands-on experience.
                 </p>
-              </motion.div>
+              </div>
             </div>
-
-            <div className="flex-1 space-y-10">
-              <motion.div variants={fadeInUp} className="flex items-start gap-5">
-                <span className="text-green-500 text-3xl pt-1">•</span>
-                <p className="text-xl text-gray-700 leading-relaxed">
-                  <span className="font-semibold text-yellow-600">Multiply Your Impact –</span> Increase your earnings up to 5X by working smarter, seizing the right projects, and leveraging teamwork.
+            
+            <div className="flex-1 space-y-8">
+              <div className="flex items-start gap-5 bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all duration-300">
+                <span className="text-[#268044] text-3xl pt-1">•</span>
+                <p className="text-xl leading-relaxed">
+                  <span className="font-semibold text-[#3c996a]">Form, Learn, Shine</span> – Start as a worker, evolve into a leader, and eventually become a job provider.
                 </p>
-              </motion.div>
-
-              <motion.div variants={fadeInUp} className="flex items-start gap-5">
-                <span className="text-green-500 text-3xl pt-1">•</span>
-                <p className="text-xl text-gray-700 leading-relaxed">
-                  <span className="font-semibold text-yellow-600">Explore More –</span> Find jobs, manage your team, track performance, and unlock better opportunities—all from one place.
+              </div>
+              
+              <div className="flex items-start gap-5 bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all duration-300">
+                <span className="text-[#268044] text-3xl pt-1">•</span>
+                <p className="text-xl leading-relaxed">
+                  <span className="font-semibold text-[#3c996a]">Multiply Your Impact</span> – Increase your earnings up to 5X by working smarter, seizing the right projects, and leveraging teamwork.
                 </p>
-              </motion.div>
+              </div>
+              
+              <div className="flex items-start gap-5 bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all duration-300">
+                <span className="text-[#268044] text-3xl pt-1">•</span>
+                <p className="text-xl leading-relaxed">
+                  <span className="font-semibold text-[#3c996a]">Explore More</span> – Find jobs, manage your team, track performance, and unlock better opportunities—all from one place.
+                </p>
+              </div>
+              
+              <div className="flex items-start gap-5 bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all duration-300">
+                <span className="text-[#268044] text-3xl pt-1">•</span>
+                <p className="text-xl leading-relaxed">
+                  Take the first step toward success—Build Your Team Today!
+                </p>
+              </div>
             </div>
-          </motion.div>
-
-          <motion.p
-            initial="hidden"
-            whileInView="visible"
-            variants={fadeInUp}
-            className="text-center text-xl text-blue-700 font-semibold mt-12"
-          >
-            Take the first step toward success—Build Your Team Today!
-          </motion.p>
+          </div>
         </div>
       </div>
-
-
-
-
     </div>
   );
 }

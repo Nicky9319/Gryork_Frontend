@@ -157,60 +157,60 @@ const CwcVestInfo = () => {
         </motion.div>
 
         <div
-          className="overflow-hidden transition-all duration-500 ease-in-out mb-20"
+          className="overflow-hidden transition-all duration-500 ease-in-out mb-16"
           style={{ height: `${height}px` }}
         >
-          <div ref={contentRef} className="bg-gradient-to-b from-white via-gray-50 to-white py-16 px-12 w-full max-w-[1440px] mx-auto rounded-3xl shadow-2xl font-sans text-gray-800">
-            <h1 className="text-4xl lg:text-5xl font-bold text-center text-gray-900 mb-12 leading-tight">
-              CWC VEST by <span className="text-blue-600">Gryork</span> – Financial Protection for Your Projects
+          <div ref={contentRef} className="bg-gradient-to-b from-white via-gray-50 to-white py-12 px-4 md:px-8 w-full max-w-[98%] mx-auto rounded-3xl shadow-2xl font-sans text-gray-800 border border-gray-100">
+            <h1 className="text-3xl lg:text-4xl font-bold text-center text-gray-900 mb-10 leading-tight">
+              CWC VEST by <span className="text-[#268044]">Gryork</span> – Financial Protection for Your Projects
             </h1>
 
-            <div className="flex flex-col lg:flex-row gap-10">
-              <div className="flex-1 space-y-10">
-                <div className="flex items-start gap-5">
-                  <span className="text-green-500 text-3xl pt-1">•</span>
+            <div className="flex flex-col lg:flex-row gap-8">
+              <div className="flex-1 space-y-8">
+                <div className="flex items-start gap-5 bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all duration-300">
+                  <span className="text-[#268044] text-3xl pt-1">•</span>
                   <p className="text-xl leading-relaxed">
                     VEST offers comprehensive financial protection for contractors, ensuring business continuity
                     even when facing payment delays and project uncertainties.
                   </p>
                 </div>
-
-                <div className="flex items-start gap-5">
-                  <span className="text-green-500 text-3xl pt-1">•</span>
+                
+                <div className="flex items-start gap-5 bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all duration-300">
+                  <span className="text-[#268044] text-3xl pt-1">•</span>
                   <p className="text-xl leading-relaxed">
-                    <span className="font-semibold text-yellow-600">Payment Shield Protection</span> – Access funds immediately when client payments
+                    <span className="font-semibold text-[#3c996a]">Payment Shield Protection</span> – Access funds immediately when client payments
                     are delayed, ensuring your operational expenses are always covered.
                   </p>
                 </div>
-
-                <div className="flex items-start gap-5">
-                  <span className="text-green-500 text-3xl pt-1">•</span>
+                
+                <div className="flex items-start gap-5 bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all duration-300">
+                  <span className="text-[#268044] text-3xl pt-1">•</span>
                   <p className="text-xl leading-relaxed">
-                    <span className="font-semibold text-yellow-600">Project Risk Insurance</span> – Safeguard against unexpected project delays and challenges
+                    <span className="font-semibold text-[#3c996a]">Project Risk Insurance</span> – Safeguard against unexpected project delays and challenges
                     with our comprehensive coverage options.
                   </p>
                 </div>
               </div>
-
-              <div className="flex-1 space-y-10">
-                <div className="flex items-start gap-5">
-                  <span className="text-green-500 text-3xl pt-1">•</span>
+              
+              <div className="flex-1 space-y-8">
+                <div className="flex items-start gap-5 bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all duration-300">
+                  <span className="text-[#268044] text-3xl pt-1">•</span>
                   <p className="text-xl leading-relaxed">
-                    <span className="font-semibold text-yellow-600">Working Capital Solutions</span> – Maintain steady cash flow with quick access to funds
+                    <span className="font-semibold text-[#3c996a]">Working Capital Solutions</span> – Maintain steady cash flow with quick access to funds
                     when bills are approved but payment hasn't arrived yet.
                   </p>
                 </div>
-
-                <div className="flex items-start gap-5">
-                  <span className="text-green-500 text-3xl pt-1">•</span>
+                
+                <div className="flex items-start gap-5 bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all duration-300">
+                  <span className="text-[#268044] text-3xl pt-1">•</span>
                   <p className="text-xl leading-relaxed">
-                    <span className="font-semibold text-yellow-600">Business Continuity Protection</span> – Complete business protection that works alongside
+                    <span className="font-semibold text-[#3c996a]">Business Continuity Protection</span> – Complete business protection that works alongside
                     our CWC solution to ensure your operations never face financial disruption.
                   </p>
                 </div>
-
-                <div className="flex items-start gap-5">
-                  <span className="text-green-500 text-3xl pt-1">•</span>
+                
+                <div className="flex items-start gap-5 bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all duration-300">
+                  <span className="text-[#268044] text-3xl pt-1">•</span>
                   <p className="text-xl leading-relaxed">
                     CWC VEST works with our financing solutions to create a complete safety net for your construction
                     business, ensuring you're protected from all financial risks.
@@ -220,8 +220,6 @@ const CwcVestInfo = () => {
             </div>
           </div>
         </div>
-
-
       </div>
 
     </>
