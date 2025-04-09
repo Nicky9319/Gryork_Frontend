@@ -58,9 +58,9 @@ const CWC = () => {
         <p className="text-lg md:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
           Our AI-powered financing solution designed specifically for contractors and infrastructure projects
         </p>
-        <motion.div 
-          className="mt-8 h-1 w-32 bg-gradient-to-r from-green-400 to-[#268044] mx-auto rounded-full"
-          animate={{ 
+        <motion.div
+          className="mt-8 h-1 w-32 bg-[#2E8B57] mx-auto rounded-full"
+          animate={{
             width: ["0%", "32%", "24%", "32%"],
             opacity: [0, 1]
           }}
