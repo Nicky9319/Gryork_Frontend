@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+// Import the image directly as a module
+import laptopIcon from '../../../Images/laptop.svg';
 
 const AIPoweredSection = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -34,7 +36,7 @@ const AIPoweredSection = () => {
               <div className="relative z-20 max-w-[50vw]">
                 <svg className="w-full h-auto" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
                   <image
-                    href="src/Images/laptop.svg"
+                    href={laptopIcon}
                     alt="Laptop illustration"
                     x="-190"
                     y="-50"
@@ -114,7 +116,7 @@ const AIPoweredSection = () => {
             }}>
               <svg className="w-full h-full" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
                 <image
-                  href="src/Images/laptop.svg"
+                  href={laptopIcon}
                   alt="Laptop illustration"
                   x="-200"
                   y="-100"

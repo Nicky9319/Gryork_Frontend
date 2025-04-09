@@ -1,5 +1,9 @@
 import React from 'react';
 import useInView from '../../../hooks/useInView';
+// Import images directly as modules
+import flashIcon from '../../../Images/flash.svg';
+import bankIcon from '../../../Images/bank.svg';
+import verifiedIcon from '../../../Images/verified.svg';
 
 // Reusable FeatureCard component
 const FeatureCard = ({ icon, title, description, index }) => {
@@ -24,17 +28,17 @@ const FeatureCard = ({ icon, title, description, index }) => {
 const FeaturesSection = () => {
   const features = [
     {
-      icon: 'src/Images/flash.svg',
+      icon: flashIcon,
       title: 'SPEED',
       description: 'Get credit in a day with full transparency',
     },
     {
-      icon: 'src/Images/bank.svg',
+      icon: bankIcon,
       title: 'Backed by',
       description: 'NBFC & Bank collaborations and automation',
     },
     {
-      icon: 'src/Images/verified.svg',
+      icon: verifiedIcon,
       title: 'Reliable',
       description: 'Repayments secured with automatic deductions',
     },
