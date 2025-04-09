@@ -18,10 +18,13 @@ import Supervisor from './Views/MoreInfo/supervisor';
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
+// Get the base URL from the import.meta.env (injected by Vite)
+const baseUrl = import.meta.env.BASE_URL || '/';
+
 function App() {
   return (
     <div className="min-h-screen overflow-x-hidden bg-gray-50 text-gray-800">
-      <Router>
+      <Router basename={baseUrl}>
         <ScrollToTop />
         <Navbar />
 
