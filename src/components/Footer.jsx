@@ -18,7 +18,7 @@ const FooterSection = ({ title, isOpen, toggle, content, navigationAction }) => 
   return (
     <div className="border-b border-green-600">
       <div 
-        className="py-4 px-4 flex justify-between items-center cursor-pointer"
+        className="py-4 pr-4 pl-1 flex justify-between items-center cursor-pointer"
         onClick={handleClick}
       >
         <h3 className="text-white text-sm font-medium">{title}</h3>
@@ -160,7 +160,7 @@ const Footer = () => {
   return (
     <section className="bg-[#268044] text-white">
       {/* Mobile Version */}
-      <div className="md:hidden w-full max-w-md mx-auto pt-3">
+      <div className="md:hidden w-full max-w-md mx-auto pt-3 pl-3">
         {navigationItems.map((item, index) => (
           <FooterSection 
             key={index}
