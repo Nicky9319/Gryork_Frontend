@@ -83,10 +83,10 @@ const ProblemSection = () => {
           
           <div 
             ref={textRef}
-            className="max-w-[800px] mx-auto relative z-10 flex flex-col justify-center items-center space-y-6 sm:space-y-8 md:space-y-12 px-4 sm:px-6"
+            className="max-w-[100%]  relative z-10 flex flex-col justify-center items-center space-y-6 sm:space-y-8 md:space-y-12 sm:px-6"
           >
             <h2 
-              className="text-4xl sm:text-6xl md:text-8xl leading-tight"
+              className="text-[55px] md:text-[100px] sm:text-6xl md:text-8xl leading-tight"
               style={{
                 opacity: textInView ? 1 : 0,
                 transform: textInView ? 'translateY(0)' : 'translateY(20px)',
@@ -97,7 +97,7 @@ const ProblemSection = () => {
               <strong>pending bills?</strong>
             </h2>
             <h2 
-              className="text-3xl sm:text-5xl md:text-6xl leading-tight text-[#268044] font-bold"
+              className="text-[48px] sm:text-5xl md:text-[100px] leading-tight text-[#268044] font-bold"
               style={{
                 opacity: textInView ? 1 : 0,
                 transform: textInView ? 'translateY(0)' : 'translateY(20px)',
@@ -108,7 +108,7 @@ const ProblemSection = () => {
               <strong>unpaid workers?</strong>
             </h2>
             <h2 
-              className="text-3xl sm:text-5xl md:text-6xl leading-tight"
+              className="text-[53px] sm:text-5xl md:text-[100px] leading-tight"
               style={{
                 opacity: textInView ? 1 : 0,
                 transform: textInView ? 'translateY(0)' : 'translateY(20px)',

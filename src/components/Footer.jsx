@@ -44,8 +44,7 @@ const Footer = () => {
     "Product",
     "social platform",
     "dispute resolution",
-    "Help & Support",
-    "trust & safety"
+    "Contact us",
   ];
   
   const getTrustAndSafetyContent = () => (
@@ -75,7 +74,7 @@ const Footer = () => {
     { name: "Gryork explained", path: "/gryork-explained", isExternal: false },
     { name: "Dispute resolution", path: "/dispute-resolution", isExternal: false },
     { name: "About us", path: "/about-us", isExternal: false },
-    { name: "Help & support", path: "/help-support", isExternal: false },
+    { name: "Contact us", path: "/help-support", isExternal: false },
   ];
 
   // Handle navigation with both internal and external links

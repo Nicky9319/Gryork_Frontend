@@ -60,7 +60,7 @@ const AIPoweredSection = () => {
                 Get started
               </a>
               <a
-                href="#"
+                href="/cwc"
                 className="bg-white text-gray-800 px-6 py-2.5 rounded-[18px] font-semibold border border-gray-300 cursor-pointer text-center transition-all duration-300 hover:bg-gray-200 shadow-md shadow-gray-500/50 text-base"
               >
                 Learn more
@@ -88,7 +88,7 @@ const AIPoweredSection = () => {
                   Get started
                 </a>
                 <a
-                  href="#"
+                  href="/cwc  "
                   className="bg-white text-gray-800 px-6 py-3 sm:px-8 sm:py-3.5 md:px-10 md:py-4 rounded-[18px] font-semibold border border-gray-300 cursor-pointer text-center transition-all duration-300 hover:bg-gray-200 shadow-md shadow-gray-500/50 text-base md:text-lg"
                 >
                   Learn more
