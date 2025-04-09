@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import useInView from '../../../hooks/useInView';
+// Import images directly as modules
+import buildingImage2 from '../../../Images/2BuildingImages.jpg';
+import buildingImage from '../../../Images/BuildingImages.jpg';
 
 const HeroSection = () => {
   const [dimensions, setDimensions] = useState({
@@ -28,7 +31,7 @@ const HeroSection = () => {
         isInView ? 'opacity-100' : 'opacity-0'
       }`}
       style={{
-        backgroundImage: "url('/src/Images/2BuildingImages.jpg')",
+        backgroundImage: `url(${buildingImage2})`,
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
         height: dimensions.width <= 640 ? 'auto' : '85vh',
@@ -36,7 +39,7 @@ const HeroSection = () => {
       }}
     >
       <img
-        src="/src/Images/BuildingImages.jpg"
+        src={buildingImage}
         alt="Background"
         className={`absolute top-0 left-0 w-full h-auto object-cover ${
           dimensions.width <= 640 ? 'block' : 'hidden'

@@ -2,12 +2,17 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import useInView from '../../../hooks/useInView';
 import { useMediaQuery } from 'react-responsive';
+// Import images directly as modules
+import rupeeIcon from '../../../Images/rupee (1).svg';
+import verifiedIcon from '../../../Images/verified.svg';
+import learningIcon from '../../../Images/learning (1).svg';
+import hierarchyIcon from '../../../Images/hierarchy-structure.svg';
+import grylinkIcon from '../../../Images/grylink.svg';
 
 // Mobile-optimized Service Card component
 const MobileServiceCard = ({ title, icon, description, urlLink, onNavigate, delay = 0 }) => {
   const { ref, isInView } = useInView({ threshold: 0.1 }, delay);
 
-  
   return (
     <div 
       ref={ref}
@@ -52,62 +57,6 @@ const MobileServiceCard = ({ title, icon, description, urlLink, onNavigate, dela
     </div>
   );
 };
-
-
-// const MobileServiceCard = ({ title, icon, description, urlLink, onNavigate, delay = 0 }) => {
-//   // Check if the viewport is mobile-sized
-//   const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
-//   const { ref, isInView } = useInView({ threshold: 0.1 }, delay);
-
-//   // Render nothing if not on a mobile device (or you could render a fallback)
-//   if (!isMobile) return null;
-
-//   // Define mobile-specific classes
-//   const containerClasses =
-//     "relative w-[300px] h-[300px] flex flex-col items-center transition-all duration-700 ease-out";
-//   const iconSizeClasses = "w-24 h-24";
-//   const titleClasses = "text-3xl";
-
-//   return (
-//     <div
-//       ref={ref}
-//       className={`${containerClasses} ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}
-//     >
-//       <div
-//         className={`absolute -top-[55px] left-1/2 transform -translate-x-1/2 z-10 transition-all duration-700 delay-200 ${
-//           isInView ? 'opacity-100 scale-100' : 'opacity-0 scale-75'
-//         }`}
-//         style={{ background: 'none' }}
-//       >
-//         <img src={icon} alt={title} className={`${iconSizeClasses} sm:w-28 sm:h-28 xs:w-24 xs:h-24`} />
-//       </div>
-
-//       <div className="w-full h-full rounded-full overflow-hidden relative shadow-xl">
-//         <div className="before:content-[''] before:absolute before:top-0 before:left-0 before:w-full before:h-1/2 before:bg-white before:z-[1] after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-1/2 after:bg-[#268044] after:z-[1]">
-//           <div className="relative z-[2] w-full h-full flex flex-col justify-center items-center p-12 sm:p-8 xs:p-6 text-center">
-//             <br className="xs:hidden" />
-//             <br className="xs:hidden" />
-//             <h3 className={`${titleClasses} font-bold uppercase z-[2] mb-3 mt-10 sm:text-4xl xs:text-3xl`}>{title}</h3>
-//             <br className="xs:hidden" />
-//             <p className="text-2xl leading-snug text-black z-[2] relative -top-[15%] md:text-xl sm:text-base xs:text-sm text-white">
-//               {description}
-//             </p>
-//           </div>
-//         </div>
-//       </div>
-
-//       <a
-//         href={urlLink || "/"}
-//         onClick={(e) => onNavigate(urlLink || "/", e)}
-//         className={`absolute -bottom-[25px] left-1/2 transform -translate-x-1/2 bg-[#CFF063] py-4 px-10 rounded-full text-black no-underline text-xl font-bold z-10 shadow-md sm:text-lg sm:py-3 sm:px-8 xs:text-sm xs:py-2 xs:px-6 transition-all duration-700 delay-300 hover:bg-[#b5d650] ${
-//           isInView ? 'opacity-100 scale-100' : 'opacity-0 scale-90'
-//         }`}
-//       >
-//         learn more
-//       </a>
-//     </div>
-//   );
-// };
 
 // Reusable Service Card component (desktop version)
 const ServiceCard = ({ title, icon, description, urlLink, onNavigate, delay = 0 }) => {
@@ -189,31 +138,31 @@ const ServicesSection = () => {
   const services = [
     {
       title: 'CWC',
-      icon: '/src/Images/rupee (1).svg',
+      icon: rupeeIcon,
       description: 'Short Term credit Solution for subcontractors',
       urlLink: '/cwc'
     },
     {
       title: 'CWC VEST',
-      icon: '/src/Images/verified.svg',
+      icon: verifiedIcon,
       description: 'Your projects\'s finance safety against payment delays',
       urlLink: '/cwc-vest'
     },
     {
       title: 'SUPERVISOR',
-      icon: '/src/Images/learning (1).svg',
+      icon: learningIcon,
       description: 'An AI-powered tool that automate your workflow',
       urlLink: '/supervisor'
     },
     {
       title: 'TEAMS',
-      icon: '/src/Images/hierarchy-structure.svg',
+      icon: hierarchyIcon,
       description: 'Build and grow a skilled work balance',
       urlLink: '/team'
     },
     {
       title: 'GRYLINK',
-      icon: '/src/Images/grylink.svg',
+      icon: grylinkIcon,
       description: 'Smarter Credit Decisions. Seamless Integration',
       urlLink: '/grylink'
     }

@@ -1,5 +1,7 @@
 import React from 'react';
 import useInView from '../../../hooks/useInView';
+// Import the image directly as a module
+import bankingIcon from '../../../Images/banking.svg';
 
 const SpeedSection = () => {
   const { ref, isInView } = useInView({}, 200);
@@ -15,7 +17,7 @@ const SpeedSection = () => {
             </h2>
             <div className="w-1/2">
               <img
-                src="src/Images/banking.svg"
+                src={bankingIcon}
                 alt="Banking"
                 className="w-full h-auto"
               />
@@ -57,7 +59,7 @@ const SpeedSection = () => {
           <div className="relative">
             <div className="feature-icon-bank">
               <img
-                src="src/Images/banking.svg"
+                src={bankingIcon}
                 alt="Banking"
                 className="w-full max-w-[300px] md:max-w-[400px] lg:max-w-[530px] h-auto"
               />

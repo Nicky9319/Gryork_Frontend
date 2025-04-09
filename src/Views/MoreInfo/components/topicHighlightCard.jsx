@@ -1,4 +1,7 @@
 import React from "react";
+// Import images directly as modules
+import hillIcon from '../../../Images/hill.svg';
+import barsIcon from '../../../Images/bars.svg';
 
 const TopicHighlightCard = () => {
   return (
@@ -15,12 +18,12 @@ const TopicHighlightCard = () => {
       </div> */}
 
     <div className="absolute bottom-0 left-0 w-full h-2/3">
-        <img src="src/Images/hill.svg" alt="" className="w-full object-cover" />
+        <img src={hillIcon} alt="" className="w-full object-cover" />
     </div>
 
       <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 w-32 h-32 md:w-40 md:h-40">
         <img
-          src="src/Images/bars.svg" // Replace this with the correct path if dynamic
+          src={barsIcon}
           alt="illustration"
           className="w-full h-full object-contain"
         />
