@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react';
-import HeroSection from './Components/HeroSection';
-import ProblemSection from './Components/ProblemSection';
-import AIPoweredSection from './Components/AIPoweredSection';
-import ServicesSection from './Components/ServicesSection';
-import FeaturesSection from './Components/FeaturesSection';
-import SpeedSection from './Components/SpeedSection';
+import HeroSection from './components/HeroSection';
+import ProblemSection from './components/ProblemSection';
+import AIPoweredSection from './components/AIPoweredSection';
+import ServicesSection from './components/ServicesSection';
+import FeaturesSection from './components/FeaturesSection';
+import SpeedSection from './components/SpeedSection';
 
 function MainPage() {
   // Add scroll to top effect when component mounts
