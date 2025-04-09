@@ -172,6 +172,7 @@ const ServicesSection = () => {
   if (isMobile) {
     return (
       <div 
+        id="services-section"
         ref={sectionRef}
         className={`max-w-[1600px] mx-auto my-12 px-4 transition-all duration-700 ${
           sectionInView ? 'opacity-100' : 'opacity-0'
@@ -196,6 +197,7 @@ const ServicesSection = () => {
   // Desktop view - original layout
   return (
     <div 
+      id="services-section"
       ref={sectionRef}
       className={`max-w-[1600px] mx-auto my-12 px-8 sm:px-4 transition-all duration-700 ${
         sectionInView ? 'opacity-100' : 'opacity-0'

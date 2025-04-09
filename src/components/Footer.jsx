@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { ChevronDown } from 'lucide-react';
 import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
-import { Link } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
+import { scrollToElement } from '../utils/scrollService';
 
 const FooterSection = ({ title, isOpen, toggle, content }) => {
   const isTrustAndSafety = title.toLowerCase() === 'trust & safety';
@@ -33,6 +34,8 @@ const FooterSection = ({ title, isOpen, toggle, content }) => {
 
 const Footer = () => {
   const [openSection, setOpenSection] = useState(null);
+  const navigate = useNavigate();
+  const location = useLocation();
   
   const toggleSection = (index) => {
     setOpenSection(openSection === index ? null : index);
@@ -70,7 +73,7 @@ const Footer = () => {
   // Define navigation items with proper routing
   const navigationItems = [
     { name: "Home", path: "/", isExternal: false },
-    { name: "Product", path: "/product", isExternal: false },
+    { name: "Product", path: "/", isExternal: false, scrollTo: "services-section" },
     { name: "Gryork explained", path: "/gryork-explained", isExternal: false },
     { name: "Dispute resolution", path: "/dispute-resolution", isExternal: false },
     { name: "About us", path: "/about-us", isExternal: false },
@@ -79,6 +82,26 @@ const Footer = () => {
 
   // Handle navigation with both internal and external links
   const renderNavLink = (item, index) => {
+    const handleClick = (e) => {
+      if (item.scrollTo) {
+        e.preventDefault();
+        
+        // If we're already on the home page, just scroll to the element
+        if (location.pathname === '/') {
+          // Add 100px offset to scroll above the services section
+          scrollToElement(item.scrollTo, {}, 100);
+        } else {
+          // Otherwise, navigate to home page and then scroll
+          navigate('/');
+          // The scrolling will happen after navigation completes
+          setTimeout(() => {
+            // Add 100px offset to scroll above the services section
+            scrollToElement(item.scrollTo, {}, 100);
+          }, 100);
+        }
+      }
+    };
+
     if (item.isExternal) {
       return (
         <a 
@@ -95,6 +118,7 @@ const Footer = () => {
         <Link 
           to={item.path}
           className="text-white text-2xl hover:text-gray-200 transition-colors"
+          onClick={item.scrollTo ? handleClick : undefined}
         >
           {item.name}
         </Link>
