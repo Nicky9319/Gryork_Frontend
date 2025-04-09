@@ -159,9 +159,8 @@ const Footer = () => {
 
   return (
     <section className="bg-[#268044] text-white">
-      <br />
       {/* Mobile Version */}
-      <div className="md:hidden w-full max-w-md mx-auto">
+      <div className="md:hidden w-full max-w-md mx-auto pt-3">
         {navigationItems.map((item, index) => (
           <FooterSection 
             key={index}
