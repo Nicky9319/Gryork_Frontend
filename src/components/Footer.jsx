@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { ChevronDown } from 'lucide-react';
 import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
+import { Link } from 'react-router-dom';
 
 const FooterSection = ({ title, isOpen, toggle, content }) => {
   const isTrustAndSafety = title.toLowerCase() === 'trust & safety';
@@ -67,6 +68,41 @@ const Footer = () => {
     </div>
   );
 
+  // Define navigation items with proper routing
+  const navigationItems = [
+    { name: "Home", path: "/", isExternal: false },
+    { name: "Product", path: "/product", isExternal: false },
+    { name: "Gryork explained", path: "/gryork-explained", isExternal: false },
+    { name: "Dispute resolution", path: "/dispute-resolution", isExternal: false },
+    { name: "About us", path: "/about-us", isExternal: false },
+    { name: "Help & support", path: "/help-support", isExternal: false },
+  ];
+
+  // Handle navigation with both internal and external links
+  const renderNavLink = (item, index) => {
+    if (item.isExternal) {
+      return (
+        <a 
+          href={item.path}
+          className="text-white text-2xl hover:text-gray-200 transition-colors"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {item.name}
+        </a>
+      );
+    } else {
+      return (
+        <Link 
+          to={item.path}
+          className="text-white text-2xl hover:text-gray-200 transition-colors"
+        >
+          {item.name}
+        </Link>
+      );
+    }
+  };
+
   return (
     <section className="bg-[#268044] text-white">
       {/* Mobile Version */}
@@ -114,22 +150,13 @@ const Footer = () => {
       <div className="hidden md:flex flex-col py-16 px-[10%] min-h-[850px] justify-between">
         {/* First Row: Menu and Trust & Safety */}
         <div className="flex flex-wrap mb-5">
-          {/* Left Column - Company Menu */}
+          
           <div className="w-[30%]">
             <h2 className="text-4xl font-bold text-[#CFF063] mb-8">Company</h2>
             <ul className="list-none space-y-6">
-              {[
-                { name: "Home", link: "/" },
-                { name: "Product", link: "#" },
-                { name: "Gryork explained", link: "/gryork-explained" },
-                { name: "Dispute resolution", link: "/dispute-resolution" },
-                { name: "About us", link: "/about-us" },
-                { name: "Help & support", link: "#" },
-              ].map((item, index) => (
+              {navigationItems.map((item, index) => (
                 <li key={index} className="mb-2">
-                  <a href={item.link} className="text-white text-2xl hover:text-gray-200 transition-colors">
-                    {item.name}
-                  </a>
+                  {renderNavLink(item, index)}
                 </li>
               ))}
             </ul>
