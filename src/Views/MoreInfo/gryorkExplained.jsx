@@ -157,7 +157,7 @@ export default function GryorkExplanation() {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-5xl font-bold mb-6 relative inline-block">
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-green-600 to-blue-600">How We Make It Happen</span>
+            <span className="text-green-600">How We Make It Happen</span>
             <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-to-r from-green-400 to-blue-400"></div>
           </h2>
           <p className="text-xl text-gray-700 max-w-3xl mx-auto">

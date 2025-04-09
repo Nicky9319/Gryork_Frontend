@@ -99,7 +99,7 @@ const AboutUsSection = () => {
 
   return (
     <div className="w-full bg-gradient-to-b from-gray-100 to-white overflow-hidden">
-      <div className="relative w-full h-[50vh] bg-gradient-to-r from-green-800 to-green-600 overflow-hidden">
+      <div className="relative w-full h-[50vh] bg-green-600 overflow-hidden">
         <div className="absolute inset-0 bg-pattern bg-cover bg-center opacity-20"></div>
 
         <div className="absolute top-0 left-0 w-32 h-32 bg-green-400 rounded-full filter blur-3xl opacity-20 animate-pulse"></div>
@@ -178,10 +178,10 @@ const AboutUsSection = () => {
               transition={{ delay: 0.2, duration: 0.5 }}
               className="text-4xl font-semibold mb-8 relative"
             >
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-red-500 to-orange-500">
+              <span className="bg-clip-text text-transparent bg-red-500">
                 🛠️ Problem
               </span>
-              <div className="absolute -bottom-4 left-0 w-20 h-1 bg-gradient-to-r from-red-400 to-orange-400"></div>
+              <div className="absolute -bottom-4 left-0 w-20 h-1 bg-red-400"></div>
             </motion.h3>
             <div className="space-y-6">
               {problems.map((problem, index) => (
@@ -217,10 +217,10 @@ const AboutUsSection = () => {
               transition={{ delay: 0.2, duration: 0.5 }}
               className="text-4xl font-semibold mb-8 relative"
             >
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-green-500 to-blue-500">
+              <span className="bg-clip-text text-transparent bg-green-500">
                 💡 GRYORK Solution
               </span>
-              <div className="absolute -bottom-4 left-0 w-20 h-1 bg-gradient-to-r from-green-400 to-blue-400"></div>
+              <div className="absolute -bottom-4 left-0 w-20 h-1 bg-green-400"></div>
             </motion.h3>
             <div className="space-y-6">
               {solutions.map((solution, index) => (

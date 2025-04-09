@@ -11,7 +11,10 @@ export default defineConfig(({ command, mode }) => {
   
   return {
     
-    plugins: [react(), tailwindcss()],
+    plugins: [react({
+      // Add fast refresh configuration
+      fastRefresh: true,
+    }), tailwindcss()],
     base: base,
     resolve: {
       alias: {
@@ -20,6 +23,10 @@ export default defineConfig(({ command, mode }) => {
     },
     server: {
       host: "0.0.0.0", // Expose to all network interfaces
+      watch: {
+        usePolling: true, // Enables polling for file changes, useful in WSL or VM environments
+        ignored: ['**/node_modules/**', '**/dist/**'],
+      },
       proxy: {
         // Proxy requests to your ngrok tunnel
         "/api":
@@ -33,6 +40,9 @@ export default defineConfig(({ command, mode }) => {
       },
       hmr: {
         clientPort: 5173, // If using HTTPS ngrok tunnel, set to 443
+        host: 'localhost',
+        overlay: true, // Shows full-screen overlay when errors occur
+        timeout: 20000, // Increase timeout for slower connections
       },
     },
   };
