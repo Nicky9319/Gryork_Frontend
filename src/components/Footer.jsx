@@ -4,17 +4,25 @@ import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { scrollToElement } from '../utils/scrollService';
 
-const FooterSection = ({ title, isOpen, toggle, content }) => {
-  const isTrustAndSafety = title.toLowerCase() === 'trust & safety';
+const FooterSection = ({ title, isOpen, toggle, content, navigationAction }) => {
+  const hasTrustAndSafetyContent = title.toLowerCase() === 'trust & safety';
+  
+  const handleClick = () => {
+    if (hasTrustAndSafetyContent) {
+      toggle();
+    } else if (navigationAction) {
+      navigationAction();
+    }
+  };
   
   return (
     <div className="border-b border-green-600">
       <div 
-        className={`py-4 px-4 flex justify-between items-center ${isTrustAndSafety ? 'cursor-pointer' : ''}`}
-        onClick={isTrustAndSafety ? toggle : undefined}
+        className="py-4 px-4 flex justify-between items-center cursor-pointer"
+        onClick={handleClick}
       >
         <h3 className="text-white text-sm font-medium">{title}</h3>
-        {isTrustAndSafety && (
+        {hasTrustAndSafetyContent && (
           <ChevronDown 
             className={`text-white transition-transform duration-300 ${isOpen ? 'transform rotate-180' : ''}`} 
             size={20} 
@@ -41,13 +49,24 @@ const Footer = () => {
     setOpenSection(openSection === index ? null : index);
   };
   
-  const footerSections = [
-    "ABOUT US",
-    "GRYOK Explained",
-    "Product",
-    "social platform",
-    "dispute resolution",
-    "Contact us",
+  // Define navigation items with proper routing and mobile friendly names
+  const navigationItems = [
+    { name: "ABOUT US", path: "/about-us", isExternal: false },
+    { name: "GRYOK Explained", path: "/gryork-explained", isExternal: false },
+    { name: "Product", path: "/", isExternal: false, scrollTo: "services-section" },
+    { name: "Home", path: "/", isExternal: false },
+    { name: "Dispute Resolution", path: "/dispute-resolution", isExternal: false },
+    { name: "Contact us", path: "/help-support", isExternal: false },
+  ];
+  
+  // Desktop navigation items
+  const desktopNavItems = [
+    { name: "Home", path: "/", isExternal: false },
+    { name: "Product", path: "/", isExternal: false, scrollTo: "services-section" },
+    { name: "Gryork explained", path: "/gryork-explained", isExternal: false },
+    { name: "Dispute resolution", path: "/dispute-resolution", isExternal: false },
+    { name: "About us", path: "/about-us", isExternal: false },
+    { name: "Contact us", path: "/help-support", isExternal: false },
   ];
   
   const getTrustAndSafetyContent = () => (
@@ -70,15 +89,27 @@ const Footer = () => {
     </div>
   );
 
-  // Define navigation items with proper routing
-  const navigationItems = [
-    { name: "Home", path: "/", isExternal: false },
-    { name: "Product", path: "/", isExternal: false, scrollTo: "services-section" },
-    { name: "Gryork explained", path: "/gryork-explained", isExternal: false },
-    { name: "Dispute resolution", path: "/dispute-resolution", isExternal: false },
-    { name: "About us", path: "/about-us", isExternal: false },
-    { name: "Contact us", path: "/help-support", isExternal: false },
-  ];
+  // Handle navigation with both internal and external links
+  const handleNavigation = (item) => {
+    if (item.scrollTo) {
+      // If we're already on the home page, just scroll to the element
+      if (location.pathname === '/') {
+        // Add 100px offset to scroll above the services section
+        scrollToElement(item.scrollTo, {}, 100);
+      } else {
+        // Otherwise, navigate to home page and then scroll
+        navigate('/');
+        // The scrolling will happen after navigation completes
+        setTimeout(() => {
+          // Add 100px offset to scroll above the services section
+          scrollToElement(item.scrollTo, {}, 100);
+        }, 100);
+      }
+    } else {
+      // Regular navigation
+      navigate(item.path);
+    }
+  };
 
   // Handle navigation with both internal and external links
   const renderNavLink = (item, index) => {
@@ -128,15 +159,17 @@ const Footer = () => {
 
   return (
     <section className="bg-[#268044] text-white">
+      <br />
       {/* Mobile Version */}
       <div className="md:hidden w-full max-w-md mx-auto">
-        {footerSections.map((section, index) => (
+        {navigationItems.map((item, index) => (
           <FooterSection 
             key={index}
-            title={section}
+            title={item.name}
             isOpen={openSection === index}
             toggle={() => toggleSection(index)}
-            content={section.toLowerCase() === 'trust & safety' ? getTrustAndSafetyContent() : null}
+            content={item.name.toLowerCase() === 'trust & safety' ? getTrustAndSafetyContent() : null}
+            navigationAction={() => handleNavigation(item)}
           />
         ))}
         
@@ -177,7 +210,7 @@ const Footer = () => {
           <div className="w-[30%]">
             <h2 className="text-4xl font-bold text-[#CFF063] mb-8">Company</h2>
             <ul className="list-none space-y-6">
-              {navigationItems.map((item, index) => (
+              {desktopNavItems.map((item, index) => (
                 <li key={index} className="mb-2">
                   {renderNavLink(item, index)}
                 </li>
