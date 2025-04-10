@@ -16,6 +16,8 @@ import CwcVestInfo from './Views/MoreInfo/cwcVest';
 import Team from './Views/MoreInfo/team';
 import Supervisor from './Views/MoreInfo/supervisor';
 
+import ContactUs from './Views/ContactUs/contactUs';
+
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 // Get the base URL from the import.meta.env (injected by Vite)
@@ -38,6 +40,7 @@ function App() {
           <Route path="/cwc-vest" element={<CwcVestInfo />} />
           <Route path="/team" element={<Team />} />
           <Route path="/supervisor" element={<Supervisor />} />
+          <Route path="/contact-us" element={<ContactUs />} />
         </Routes>
 
         <Footer />
