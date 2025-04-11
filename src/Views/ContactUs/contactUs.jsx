@@ -41,7 +41,7 @@ const roles = [
     continueText: 'Continue',
     fields: [
       { type: 'input',       name: 'name',             label: 'Name',              icon: <User size={18} />,     placeholder: 'Enter your name' },
-      { type: 'multiselect', name: 'options',          label: 'Select Roles',      icon: <FileText size={18} />, options: ['Reference', 'Online', 'Others..'] },
+      { type: 'multiselect', name: 'options',          label: 'How did u find about us ?',      icon: <FileText size={18} />, options: ['Reference', 'Online', 'Others..'] },
       { type: 'input',    name: 'emailOrMobileBumber',  label: 'Email Or Mobile Number', icon: <FileText size={18} />, placeholder: 'Enter email or number' },
       { type: 'textarea',    name: 'feedback',         label: 'Feedback',          icon: <FileText size={18} />, placeholder: 'Enter your feedback' },
     ],
