@@ -16,6 +16,7 @@ import CwcVestInfo from './Views/MoreInfo/cwcVest';
 import Team from './Views/MoreInfo/team';
 import Supervisor from './Views/MoreInfo/supervisor';
 
+
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 // Get the base URL from the import.meta.env (injected by Vite)

@@ -5,6 +5,7 @@ import AIPoweredSection from './components/AIPoweredSection';
 import ServicesSection from './components/ServicesSection';
 import FeaturesSection from './components/FeaturesSection';
 import SpeedSection from './components/SpeedSection';
+import Header from './components/Header';
 
 function MainPage() {
   // Add scroll to top effect when component mounts
@@ -14,8 +15,9 @@ function MainPage() {
 
   return (
     <>
-      <HeroSection />
-      <ProblemSection />
+      <Header/>
+      {/* <HeroSection />
+      <ProblemSection /> */}
       <AIPoweredSection />
       <ServicesSection />
       <FeaturesSection />
