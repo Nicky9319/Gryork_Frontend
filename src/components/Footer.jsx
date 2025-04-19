@@ -56,7 +56,7 @@ const Footer = () => {
     { name: "Product", path: "/", isExternal: false, scrollTo: "services-section" },
     { name: "Home", path: "/", isExternal: false },
     { name: "Dispute Resolution", path: "/dispute-resolution", isExternal: false },
-    { name: "Contact us", path: "/help-support", isExternal: false },
+    { name: "Contact us", path: "/contact-us", isExternal: false },
   ];
   
   // Desktop navigation items
@@ -66,7 +66,7 @@ const Footer = () => {
     { name: "Gryork explained", path: "/gryork-explained", isExternal: false },
     { name: "Dispute resolution", path: "/dispute-resolution", isExternal: false },
     { name: "About us", path: "/about-us", isExternal: false },
-    { name: "Contact us", path: "/help-support", isExternal: false },
+    { name: "Contact us", path: "/contact-us", isExternal: false },
   ];
   
   const getTrustAndSafetyContent = () => (

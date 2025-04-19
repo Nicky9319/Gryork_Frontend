@@ -82,13 +82,13 @@ const AIPoweredSection = () => {
               </p>
               <div className="flex flex-col sm:flex-row gap-3 justify-center md:justify-start">
                 <a
-                  href="#"
+                  href="/contact-us"
                   className="bg-[#268044] text-white px-6 py-3 sm:px-8 sm:py-3.5 md:px-10 md:py-4 rounded-[18px] font-semibold cursor-pointer text-center transition-all duration-300 hover:bg-[#1e6a36] shadow-md shadow-gray-500/50 text-base md:text-lg"
                 >
                   Get started
                 </a>
                 <a
-                  href="/cwc  "
+                  href="/cwc"
                   className="bg-white text-gray-800 px-6 py-3 sm:px-8 sm:py-3.5 md:px-10 md:py-4 rounded-[18px] font-semibold border border-gray-300 cursor-pointer text-center transition-all duration-300 hover:bg-gray-200 shadow-md shadow-gray-500/50 text-base md:text-lg"
                 >
                   Learn more
