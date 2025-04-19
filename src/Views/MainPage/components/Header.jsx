@@ -93,7 +93,7 @@ export default function WelcomeToGryork() {
           <h1 className="text-5xl font-bold text-gray-800 text-center">
             Welcome to
             <br />
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-gray-800 to-green-600 transition-all duration-700">Gryork</span>
+            Gryork
           </h1>
         </div>
         
@@ -116,7 +116,7 @@ export default function WelcomeToGryork() {
           {/* Construction Image section */}
           <div className={`px-4 mb-8 transition-all duration-1000 delay-600 transform ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             <div className="max-w-lg mx-auto w-full bg-green-50 rounded-lg p-6 relative">
-              <h1 className="text-4xl font-bold text-gray-700 text-center mb-4 animate-pulse">Grow your work</h1>
+              <h1 className="text-4xl font-bold text-gray-700 text-center mb-4">Grow your work</h1>
             
               <div className="relative mb-6">
                 <img 
