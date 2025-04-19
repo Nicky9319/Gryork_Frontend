@@ -36,17 +36,20 @@ const Navbar = () => {
   }, [isMenuOpen]);
 
   return (
-    <div className="navbar-container border-b-2 border-black relative">
+    <div className="navbar-container border-b-2 border-[#313234] relative">
       <nav className="navbar flex justify-between items-center p-4 bg-white relative z-10">
         <a href="/" onClick={(e) => handleNavigation('/', e)} className="logo text-2xl font-bold text-[#313234] no-underline">
           GRYORK
         </a>
 
         <div>
-          <button onClick={(e) => handleNavigation('/', e)}>
-          Name is Gryork
+          <button 
+            onClick={(e) => handleNavigation('/contact-us', e)} 
+            className="bg-[#313234] text-white font-semibold py-2 px-4 rounded-lg shadow-md hover:from-[#4a4a4a] hover:to-[#313234] hover:shadow-lg transition-all duration-300"
+          >
+            Wanna Give Feedback ??
           </button>
-      </div>
+        </div>
 
         <div className="flex items-center space-x-4">
           <button className="menu-toggle bg-transparent border-none cursor-pointer" onClick={toggleMenu}>
@@ -60,8 +63,6 @@ const Navbar = () => {
         
       </nav>
 
-      
-
       <div
         ref={menuRef}
         className={`menu-container absolute left-1/2 transform -translate-x-1/2 top-0 w-auto bg-white z-20 transition-all duration-500 rounded-lg ${isMenuOpen ? 'opacity-100 translate-y-12' : 'opacity-0 -translate-y-full pointer-events-none'
@@ -73,7 +74,7 @@ const Navbar = () => {
               <a
                 href="/"
                 onClick={(e) => handleNavigation('/', e)}
-                className="text-[#313234] no-underline hover:font-bold hover:text-black transition-all text-base px-4 whitespace-nowrap"
+                className="text-[#313234] no-underline hover:font-bold hover:text-[#4a4a4a] transition-all text-base px-4 whitespace-nowrap"
               >
                 Home
               </a>
@@ -83,7 +84,7 @@ const Navbar = () => {
               <a
                 href="/gryork-explained"
                 onClick={(e) => handleNavigation('/gryork-explained', e)}
-                className="text-[#313234] no-underline hover:font-bold hover:text-black transition-all text-base px-4 whitespace-nowrap"
+                className="text-[#313234] no-underline hover:font-bold hover:text-[#4a4a4a] transition-all text-base px-4 whitespace-nowrap"
               >
                 Who Are We
               </a>
@@ -93,7 +94,7 @@ const Navbar = () => {
               <a
                 href="/about-us"
                 onClick={(e) => handleNavigation('/about-us', e)}
-                className="text-[#313234] no-underline hover:font-bold hover:text-black transition-all text-base px-4 whitespace-nowrap"
+                className="text-[#313234] no-underline hover:font-bold hover:text-[#4a4a4a] transition-all text-base px-4 whitespace-nowrap"
               >
                 About Us
               </a>
@@ -103,7 +104,7 @@ const Navbar = () => {
               <a
                 href="/dispute-resolution"
                 onClick={(e) => handleNavigation('/dispute-resolution', e)}
-                className="text-[#313234] no-underline hover:font-bold hover:text-black transition-all text-base px-4 whitespace-nowrap"
+                className="text-[#313234] no-underline hover:font-bold hover:text-[#4a4a4a] transition-all text-base px-4 whitespace-nowrap"
               >
                 Resolving Conflict
               </a>
@@ -113,6 +114,5 @@ const Navbar = () => {
       </div>
 
     </div>
-
   );
 }; export default Navbar;
