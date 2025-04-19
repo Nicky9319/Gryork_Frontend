@@ -45,7 +45,7 @@ const Navbar = () => {
         <div>
           <button 
             onClick={(e) => handleNavigation('/contact-us', e)} 
-            className="bg-[#313234] text-white font-semibold py-2 px-4 rounded-lg shadow-md hover:from-[#4a4a4a] hover:to-[#313234] hover:shadow-lg transition-all duration-300"
+            className="w-full md:w-auto bg-[#313234] text-white font-semibold py-2 px-4 text-sm md:text-base rounded-lg shadow-md hover:from-[#4a4a4a] hover:to-[#313234] hover:shadow-lg transition-all duration-300"
           >
             Wanna Give Feedback ??
           </button>
