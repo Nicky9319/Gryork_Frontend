@@ -41,6 +41,13 @@ const Navbar = () => {
         <a href="/" onClick={(e) => handleNavigation('/', e)} className="logo text-2xl font-bold text-[#313234] no-underline">
           GRYORK
         </a>
+
+        <div>
+          <button onClick={(e) => handleNavigation('/', e)}>
+          Name is Gryork
+          </button>
+      </div>
+
         <div className="flex items-center space-x-4">
           <button className="menu-toggle bg-transparent border-none cursor-pointer" onClick={toggleMenu}>
             <div className="hamburger flex flex-col justify-between w-8 h-5 relative">
@@ -50,7 +57,10 @@ const Navbar = () => {
             </div>
           </button>
         </div>
+        
       </nav>
+
+      
 
       <div
         ref={menuRef}
