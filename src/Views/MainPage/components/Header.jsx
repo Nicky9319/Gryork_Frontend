@@ -100,7 +100,7 @@ export default function WelcomeToGryork() {
         <div className="flex flex-col gap-6 mx-4">
           <div className={`bg-gray-800 rounded-lg p-5 transform transition-all duration-700 ${isVisible ? 'opacity-100 translate-x-0 hover:scale-105' : 'opacity-0 -translate-x-10'}`} style={{height: "180px"}}>
             <h2 className="text-yellow-300 text-xl font-bold">Pending bills?</h2>
-            <p className="text-gray-200 text-sm">many of us face by this problemgjkjnjnnsnv sjncn</p>
+            {/* <p className="text-gray-200 text-sm">many of us face by this problemgjkjnjnnsnv sjncn</p> */}
           </div>
         
           <div className={`grid grid-cols-2 gap-4 transition-all duration-700 delay-300 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
