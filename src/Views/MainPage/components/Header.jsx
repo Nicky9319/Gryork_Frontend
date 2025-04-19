@@ -3,21 +3,19 @@ import ConstructionImage from '../../../Images/construction.jpg'; // Adjust the 
 
 export default function WelcomeToGryork() {
   return (
-    <div className="w-full max-w-md mx-auto font-sans bg-white md:max-w-4xl lg:max-w-6xl">
+    <div className="w-full font-sans bg-white">
       {/* Desktop layout */}
-      <div className="hidden md:flex md:flex-row md:items-center md:justify-between md:px-8 lg:px-16">
-        {/* Left side content */}
-        <div className="md:w-1/2 lg:w-2/5">
-          <div className="pt-10 pb-6 md:pt-16 md:pb-12">
-            <h1 className="text-5xl font-bold text-gray-800 md:text-6xl lg:text-7xl">
+      <div className="hidden md:flex md:flex-col md:px-8 lg:px-6 xl:px-6 2xl:px-32 w-full">
+        {/* First row: Welcome text and image */}
+        <div className="flex flex-row items-center justify-between py-8 md:py-12">
+          {/* Welcome text */}
+          <div className="md:w-1/2 lg:w-2/5 md:pr-8">
+            <h1 className="text-6xl font-extrabold text-gray-800 md:text-7xl lg:text-[80px]">
               Welcome to
               <br />
               Gryork
             </h1>
-          </div>
-          
-          <div className="mb-8">
-            <p className="text-gray-600">
+            <p className="text-gray-600 mt-8 text-xl lg:text-2xl">
               Streamlining construction worrkflows
               <br />
               Gryork connects contractors and workers
@@ -26,34 +24,44 @@ export default function WelcomeToGryork() {
             </p>
           </div>
           
-          <div className="flex flex-col gap-4">
-            <div className="bg-gray-800 rounded-lg p-5">
-              <h2 className="text-yellow-300 text-xl font-bold">Pending bills?</h2>
-              <p className="text-gray-200 text-sm mt-2">many of us face by this problemgjkjnjnnsnv sjncn</p>
-            </div>
-            
-            <div className="flex gap-4">
-              <div className="bg-green-600 rounded-lg p-5 flex-1">
-                <h2 className="text-white font-bold text-xl">Unpaid workers?</h2>
-              </div>
-              
-              <div className="bg-gray-800 rounded-lg p-5 flex-1">
-                <h2 className="text-white font-bold text-xl">Delayed work?</h2>
-              </div>
+          {/* Image */}
+          <div className="md:w-1/2 lg:w-3/5 flex items-center justify-center">
+            <div className="relative">
+              <div className="bg-green-100 rounded-full absolute inset-0 w-80 h-80 lg:w-[500px] lg:h-[500px] xl:w-[600px] xl:h-[600px] -z-0"></div>
+              <img 
+                src={ConstructionImage} 
+                alt="Construction site illustration" 
+                className="relative z-10 md:w-[400px] lg:w-[550px] xl:w-[600px]"
+              />
             </div>
           </div>
         </div>
         
-        {/* Right side content */}
-        <div className="md:w-1/2 lg:w-3/5 flex items-center justify-center">
-          <div className="relative">
-            <div className="bg-green-100 rounded-full absolute inset-0 w-64 h-64 lg:w-96 lg:h-96 -z-0"></div>
-            <img 
-              src="/api/placeholder/400/320" 
-              alt="Construction site illustration" 
-              className="relative z-10"
-            />
-            <h2 className="text-5xl font-bold text-gray-700 mt-6">
+        {/* Second row: Problems and Grow your work */}
+        <div className="flex flex-row items-start justify-between py-8 md:py-12">
+          {/* Problems */}
+          <div className="md:w-1/2 lg:w-2/5 md:pr-8">
+            <div className="flex flex-col gap-6">
+              <div className="bg-gray-800 rounded-lg p-8 min-h-[120px] lg:min-h-[160px] flex items-center">
+                <h2 className="text-yellow-300 text-2xl lg:text-3xl font-bold">Pending bills?</h2>
+                {/* <p className="text-gray-200 text-sm mt-2">many of us face by this problemgjkjnjnnsnv sjncn</p> */}
+              </div>
+              
+              <div className="flex gap-6">
+                <div className="bg-green-600 rounded-lg p-8 flex-1 min-h-[140px] lg:min-h-[180px] flex items-center">
+                  <h2 className="text-white font-bold text-2xl lg:text-3xl">Unpaid workers?</h2>
+                </div>
+                
+                <div className="bg-gray-800 rounded-lg p-8 flex-1 min-h-[140px] lg:min-h-[180px] flex items-center">
+                  <h2 className="text-white font-bold text-2xl lg:text-3xl">Delayed work?</h2>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          {/* Grow your work */}
+          <div className="md:w-1/2 lg:w-3/5 flex items-center justify-center">
+            <h2 className="text-6xl font-extrabold text-gray-700 lg:text-7xl xl:text-8xl">
               Grow
               <br />
               your work
@@ -63,7 +71,7 @@ export default function WelcomeToGryork() {
       </div>
       
       {/* Mobile layout - preserved from original */}
-      <div className="md:hidden">
+      <div className="md:hidden max-w-md mx-auto">
         <div className="pt-10 pb-6">
           <h1 className="text-5xl font-bold text-gray-800 text-center">
             Welcome to
