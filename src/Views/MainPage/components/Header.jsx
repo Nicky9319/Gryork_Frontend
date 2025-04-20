@@ -46,33 +46,27 @@ export default function WelcomeToGryork() {
           {/* Problems */}
           <div className={`md:w-1/2 lg:w-2/5 md:pr-8 transition-all duration-1000 delay-600 transform ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-20'}`}>
             <div className="flex flex-col gap-6">
-              <div className="bg-gray-800 rounded-lg p-8 min-h-[120px] lg:min-h-[160px] flex items-center transform transition-all duration-500 hover:scale-105 hover:shadow-xl">
+              <div className="bg-gray-800 rounded-lg p-8 min-h-[120px] lg:min-h-[160px] flex flex-col transform transition-all duration-500 hover:scale-105 hover:shadow-xl">
                 <h2 className="text-yellow-300 text-2xl lg:text-3xl font-bold">Pending bills?</h2>
-                {/* <p className="text-gray-200 text-sm mt-2">many of us face by this problemgjkjnjnnsnv sjncn</p> */}
+                <p className="text-gray-200 text-sm mt-2">Struggling to maintain project cash flow?</p>
               </div>
               
               <div className="flex gap-6">
-                <div className="bg-green-600 rounded-lg p-8 flex-1 min-h-[140px] lg:min-h-[180px] flex items-center transform transition-all duration-500 hover:scale-105 hover:shadow-xl">
+                <div className="bg-green-600 rounded-lg p-8 flex-1 min-h-[140px] lg:min-h-[180px] flex flex-col transform transition-all duration-500 hover:scale-105 hover:shadow-xl">
                   <h2 className="text-white font-bold text-2xl lg:text-3xl">Unpaid workers?</h2>
+                  <p className="text-white text-sm mt-2">Is workforce trust slipping away?</p>
                 </div>
                 
-                <div className="bg-gray-800 rounded-lg p-8 flex-1 min-h-[140px] lg:min-h-[180px] flex items-center transform transition-all duration-500 hover:scale-105 hover:shadow-xl">
+                <div className="bg-gray-800 rounded-lg p-8 flex-1 min-h-[140px] lg:min-h-[180px] flex flex-col transform transition-all duration-500 hover:scale-105 hover:shadow-xl">
                   <h2 className="text-white font-bold text-2xl lg:text-3xl">Delayed work?</h2>
+                  <p className="text-white text-sm mt-2">Losing time, money, and credibility?</p>
                 </div>
               </div>
             </div>
           </div>
           
           {/* Grow your work */}
-          {/* <div className={`md:w-1/2 lg:w-3/5 flex items-center justify-center transition-all duration-1000 delay-900 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}>
-            <h2 className="text-6xl font-extrabold text-gray-700 lg:text-7xl xl:text-8xl bg-clip-text text-transparent bg-gradient-to-b from-gray-700 to-gray-500 hover:from-green-700 hover:to-gray-700 transition-all duration-700">
-              Grow
-              your work
-            </h2>
-          </div>
-        </div> */}
-
-        <div className={`md:w-1/2 lg:w-3/5 flex items-center justify-center transition-all duration-1000 delay-900 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}>
+          <div className={`md:w-1/2 lg:w-3/5 flex items-center justify-center transition-all duration-1000 delay-900 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}>
             <h2 className="text-6xl font-extrabold text-gray-700 lg:text-7xl xl:text-8xl transition-all  duration-700">
               Grow
               <br />
@@ -80,14 +74,12 @@ export default function WelcomeToGryork() {
             </h2>
           </div>
         </div>
-
-
       </div>
       
       {/* Mobile layout with animations */}
       <div className="md:hidden max-w-md mx-auto">
         <div className={`pt-10 pb-6 transition-all duration-1000 transform ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-10'}`}>
-          <h1 className="text-5xl font-bold text-gray-800 text-center">
+          <h1 className="text-4xl font-bold text-gray-800 text-center">
             Welcome to
             <br />
             Gryork
@@ -97,16 +89,18 @@ export default function WelcomeToGryork() {
         <div className="flex flex-col gap-6 mx-4">
           <div className={`bg-gray-800 rounded-lg p-5 transform transition-all duration-700 ${isVisible ? 'opacity-100 translate-x-0 hover:scale-105' : 'opacity-0 -translate-x-10'}`} style={{height: "180px"}}>
             <h2 className="text-yellow-300 text-xl font-bold">Pending bills?</h2>
-            {/* <p className="text-gray-200 text-sm">many of us face by this problemgjkjnjnnsnv sjncn</p> */}
+            <p className="text-gray-200 text-sm mt-2">Struggling to maintain project cash flow?</p>
           </div>
         
           <div className={`grid grid-cols-2 gap-4 transition-all duration-700 delay-300 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
-            <div className="bg-green-600 rounded-lg p-5 transform transition-all duration-500 hover:scale-105" style={{height: "220px", minHeight: "100px"}}>
+            <div className="bg-green-600 rounded-lg p-5 transform transition-all duration-500 hover:scale-105 flex flex-col" style={{height: "220px", minHeight: "100px"}}>
               <h2 className="text-white font-bold text-xl">Unpaid workers?</h2>
+              <p className="text-white text-sm mt-2">Is workforce trust slipping away?</p>
             </div>
             
-            <div className="bg-gray-800 rounded-lg p-5 transform transition-all duration-500 hover:scale-105" style={{height: "220px", minHeight: "100px"}}>
+            <div className="bg-gray-800 rounded-lg p-5 transform transition-all duration-500 hover:scale-105 flex flex-col" style={{height: "220px", minHeight: "100px"}}>
               <h2 className="text-white font-bold text-xl">Delayed work?</h2>
+              <p className="text-white text-sm mt-2">Losing time, money, and credibility?</p>
             </div>
           </div>
 
