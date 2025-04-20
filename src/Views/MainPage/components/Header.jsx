@@ -47,18 +47,18 @@ export default function WelcomeToGryork() {
           <div className={`md:w-1/2 lg:w-2/5 md:pr-8 transition-all duration-1000 delay-600 transform ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-20'}`}>
             <div className="flex flex-col gap-6">
               <div className="bg-gray-800 rounded-lg p-8 min-h-[120px] lg:min-h-[160px] flex flex-col transform transition-all duration-500 hover:scale-105 hover:shadow-xl">
-                <h2 className="text-yellow-300 text-2xl lg:text-3xl font-bold">Pending bills?</h2>
+                <h2 className="text-yellow-300 text-2xl lg:text-3xl font-bold mb-2">Pending bills?</h2>
                 <p className="text-gray-200 text-sm mt-2">Struggling to maintain project cash flow?</p>
               </div>
               
               <div className="flex gap-6">
                 <div className="bg-green-600 rounded-lg p-8 flex-1 min-h-[140px] lg:min-h-[180px] flex flex-col transform transition-all duration-500 hover:scale-105 hover:shadow-xl">
-                  <h2 className="text-white font-bold text-2xl lg:text-3xl">Unpaid workers?</h2>
+                  <h2 className="text-white font-bold text-2xl lg:text-3xl mb-2">Unpaid workers?</h2>
                   <p className="text-white text-sm mt-2">Is workforce trust slipping away?</p>
                 </div>
                 
                 <div className="bg-gray-800 rounded-lg p-8 flex-1 min-h-[140px] lg:min-h-[180px] flex flex-col transform transition-all duration-500 hover:scale-105 hover:shadow-xl">
-                  <h2 className="text-white font-bold text-2xl lg:text-3xl">Delayed work?</h2>
+                  <h2 className="text-white font-bold text-2xl lg:text-3xl mb-2">Delayed work?</h2>
                   <p className="text-white text-sm mt-2">Losing time, money, and credibility?</p>
                 </div>
               </div>
