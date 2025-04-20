@@ -23,11 +23,8 @@ export default function WelcomeToGryork() {
               Gryork
             </h1>
             <p className={`text-gray-600 mt-8 text-xl lg:text-2xl transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
-              Streamlining construction worrkflows
-              <br />
-              Gryork connects contractors and workers
-              <br />
-              with powerful tools all in one platform.
+            Gryork enhances construction workflows
+            by connecting contractors and workers through an advanced tech-driven platform.
             </p>
           </div>
           
@@ -130,8 +127,8 @@ export default function WelcomeToGryork() {
               
               {/* Text below the image */}
               <p className={`text-center text-gray-600 mt-2 transition-all duration-700 delay-900 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
-                Streamlining construction workflows Gryork<br />
-                connects contractors and workers with
+              Gryork enhances construction workflows
+              by connecting contractors and workers through an advanced tech-driven platform.
               </p>
             </div>
           </div>
