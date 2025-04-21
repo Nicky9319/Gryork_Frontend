@@ -138,18 +138,8 @@ function TextAreaField({ field, value, onChange }) {
   );
 }
 
-/** 3c. Renders a multi-select checkbox group stacked vertically */
-function MultiSelectField({ field, value, onChange, otherValue, onOtherChange }) {
-  const selectedRoles = value || [];
-
-  const handleCheckboxChange = (option) => {
-    if (selectedRoles.includes(option)) {
-      onChange(field.name, selectedRoles.filter((role) => role !== option));
-    } else {
-      onChange(field.name, [...selectedRoles, option]);
-    }
-  };
-
+/** 3c. Renders a single-select radio button group */
+function SingleSelectField({ field, value, onChange, otherValue, onOtherChange }) {
   return (
     <div className="form-field mb-5" data-field-name={field.name}>
       <label className="text-black text-sm font-medium mb-2 block">
@@ -159,17 +149,17 @@ function MultiSelectField({ field, value, onChange, otherValue, onOtherChange })
         {field.options.map(option => (
           <label key={option} className="flex items-center mb-2">
             <input
-              type="checkbox"
+              type="radio"
               name={field.name}
               value={option}
-              className="form-checkbox h-4 w-4 text-green-600 transition duration-150"
-              checked={selectedRoles.includes(option)}
-              onChange={() => handleCheckboxChange(option)}
+              className="form-radio h-4 w-4 text-green-600 transition duration-150"
+              checked={value === option}
+              onChange={() => onChange(field.name, option)}
             />
             <span className="ml-2 text-gray-700 text-sm">{option}</span>
           </label>
         ))}
-        {selectedRoles.includes('Others..') && (
+        {value === 'Others..' && (
           <div className="mt-2">
             <input
               type="text"
@@ -233,17 +223,15 @@ export default function ContactUs() {
       };
     }
 
-    // Updated validation for multiselect when role is Other
-    if (selectedKey === 'Other' && (!formData.INFO_SOURCES || formData.INFO_SOURCES.length === 0)) {
+    if (selectedKey === 'Other' && !formData.INFO_SOURCES) {
       return {
         isValid: false,
-        message: 'Please select at least one option for how you found us',
+        message: 'Please select one option for how you found us',
         emptyFields: ['INFO_SOURCES']
       };
     }
 
-    // Updated validation for Others.. field if selected
-    if (formData.INFO_SOURCES?.includes('Others..') && !otherSpecify?.trim()) {
+    if (formData.INFO_SOURCES === 'Others..' && !otherSpecify?.trim()) {
       return {
         isValid: false,
         message: 'Please specify other source',
@@ -361,7 +349,7 @@ export default function ContactUs() {
     setSubmitError(null);
 
     let payload = { ...formData };
-    if (selectedKey === 'Other' && payload.INFO_SOURCES?.includes('Others..')) {
+    if (selectedKey === 'Other' && payload.INFO_SOURCES === 'Others..') {
       payload.OTHER_SOURCE_SPECIFICATION = otherSpecify;
     }
 
@@ -464,7 +452,7 @@ export default function ContactUs() {
                       onChange={handleInputChange}
                     />;
                   case 'multiselect':
-                    return <MultiSelectField
+                    return <SingleSelectField
                       key={field.name}
                       field={field}
                       value={formData[field.name]}
