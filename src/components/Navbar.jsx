@@ -42,16 +42,13 @@ const Navbar = () => {
           GRYORK
         </a>
 
-        <div>
+        <div className="flex items-center space-x-4">
           <button 
             onClick={(e) => handleNavigation('/contact-us', e)} 
-            className="w-full md:w-auto bg-[#313234] text-white font-semibold py-1 md:py-2 px-2 md:px-4 text-xs md:text-base rounded-lg shadow-md hover:from-[#4a4a4a] hover:to-[#313234] hover:shadow-lg transition-all duration-300"
+            className="w-full md:w-auto bg-[#268044] text-white font-semibold py-1 md:py-2 px-2 md:px-4 text-xs md:text-base rounded-lg shadow-md hover:from-[#4a4a4a] hover:to-[#313234] hover:shadow-lg transition-all duration-300"
           >
             Connect
           </button>
-        </div>
-
-        <div className="flex items-center space-x-4">
           <button className="menu-toggle bg-transparent border-none cursor-pointer" onClick={toggleMenu}>
             <div className="hamburger flex flex-col justify-between w-6 md:w-8 h-4 md:h-5 relative">
               <span className={`block h-1 w-full bg-[#313234] rounded absolute transition-all duration-300 ${isMenuOpen ? 'rotate-45 top-2' : 'top-0'}`}></span>
