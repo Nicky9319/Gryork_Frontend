@@ -36,31 +36,31 @@ const Navbar = () => {
   }, [isMenuOpen]);
 
   return (
-    <div className="navbar-container border-b-2 border-black relative">
-      <nav className="navbar flex justify-between items-center p-4 bg-white relative z-10">
-        <a href="/" onClick={(e) => handleNavigation('/', e)} className="logo text-2xl font-bold text-[#313234] no-underline">
+    <div className="navbar-container border-b-2 border-[#313234] relative">
+      <nav className="navbar flex justify-between items-center p-2 md:p-4 bg-white relative z-10">
+        <a href="/" onClick={(e) => handleNavigation('/', e)} className="logo text-lg md:text-2xl font-bold text-[#313234] no-underline">
           GRYORK
         </a>
 
         <div>
-          <button onClick={(e) => handleNavigation('/', e)}>
-          Name is Gryork
+          <button 
+            onClick={(e) => handleNavigation('/contact-us', e)} 
+            className="w-full md:w-auto bg-[#313234] text-white font-semibold py-1 md:py-2 px-2 md:px-4 text-xs md:text-base rounded-lg shadow-md hover:from-[#4a4a4a] hover:to-[#313234] hover:shadow-lg transition-all duration-300"
+          >
+            Connect
           </button>
-      </div>
+        </div>
 
         <div className="flex items-center space-x-4">
           <button className="menu-toggle bg-transparent border-none cursor-pointer" onClick={toggleMenu}>
-            <div className="hamburger flex flex-col justify-between w-8 h-5 relative">
+            <div className="hamburger flex flex-col justify-between w-6 md:w-8 h-4 md:h-5 relative">
               <span className={`block h-1 w-full bg-[#313234] rounded absolute transition-all duration-300 ${isMenuOpen ? 'rotate-45 top-2' : 'top-0'}`}></span>
               <span className={`block h-1 w-full bg-[#313234] rounded absolute top-2 transition-all duration-300 ${isMenuOpen ? 'opacity-0' : 'opacity-100'}`}></span>
               <span className={`block h-1 w-full bg-[#313234] rounded absolute transition-all duration-300 ${isMenuOpen ? '-rotate-45 top-2' : 'top-4'}`}></span>
             </div>
           </button>
         </div>
-        
       </nav>
-
-      
 
       <div
         ref={menuRef}
@@ -73,7 +73,7 @@ const Navbar = () => {
               <a
                 href="/"
                 onClick={(e) => handleNavigation('/', e)}
-                className="text-[#313234] no-underline hover:font-bold hover:text-black transition-all text-base px-4 whitespace-nowrap"
+                className="text-[#313234] no-underline hover:font-bold hover:text-[#4a4a4a] transition-all text-base px-4 whitespace-nowrap"
               >
                 Home
               </a>
@@ -83,7 +83,7 @@ const Navbar = () => {
               <a
                 href="/gryork-explained"
                 onClick={(e) => handleNavigation('/gryork-explained', e)}
-                className="text-[#313234] no-underline hover:font-bold hover:text-black transition-all text-base px-4 whitespace-nowrap"
+                className="text-[#313234] no-underline hover:font-bold hover:text-[#4a4a4a] transition-all text-base px-4 whitespace-nowrap"
               >
                 Who Are We
               </a>
@@ -93,7 +93,7 @@ const Navbar = () => {
               <a
                 href="/about-us"
                 onClick={(e) => handleNavigation('/about-us', e)}
-                className="text-[#313234] no-underline hover:font-bold hover:text-black transition-all text-base px-4 whitespace-nowrap"
+                className="text-[#313234] no-underline hover:font-bold hover:text-[#4a4a4a] transition-all text-base px-4 whitespace-nowrap"
               >
                 About Us
               </a>
@@ -103,7 +103,7 @@ const Navbar = () => {
               <a
                 href="/dispute-resolution"
                 onClick={(e) => handleNavigation('/dispute-resolution', e)}
-                className="text-[#313234] no-underline hover:font-bold hover:text-black transition-all text-base px-4 whitespace-nowrap"
+                className="text-[#313234] no-underline hover:font-bold hover:text-[#4a4a4a] transition-all text-base px-4 whitespace-nowrap"
               >
                 Resolving Conflict
               </a>
@@ -113,6 +113,5 @@ const Navbar = () => {
       </div>
 
     </div>
-
   );
 }; export default Navbar;
