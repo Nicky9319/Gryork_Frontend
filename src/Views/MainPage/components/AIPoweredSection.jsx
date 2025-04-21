@@ -54,7 +54,7 @@ const AIPoweredSection = () => {
             </p>
             <div className="flex flex-col gap-3">
               <a
-                href="#"
+                href="/contact-us"
                 className="bg-[#268044] text-white px-6 py-2.5 rounded-[18px] font-semibold cursor-pointer text-center transition-all duration-300 hover:bg-[#1e6a36] shadow-md shadow-gray-500/50 text-base"
               >
                 Get started
