@@ -18,7 +18,7 @@ const roles = [
     fields: [
       { type: 'input', name: 'NAME', label: 'Name', icon: <User size={18} />, placeholder: 'Enter your name' },
       { type: 'input', name: 'COMPANY_NAME', label: 'Company Name', icon: <Building size={18} />, placeholder: 'Enter your company name' },
-      { type: 'input', name: 'CONTACT_INFO', label: 'Email Or Mobile Number', icon: <FileText size={18} />, placeholder: 'Enter email or number' },
+      { type: 'input', name: 'CONTACT_INFO', label: 'Email Or Mobile Number ', icon: <FileText size={18} />, placeholder: 'Enter email or mobile number' },
       { type: 'textarea', name: 'FEEDBACK', label: 'Feedback', icon: <FileText size={18} />, placeholder: 'Enter your feedback' },
     ],
     submitText: 'Submit Contractor Info',
