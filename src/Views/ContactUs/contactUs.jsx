@@ -257,7 +257,7 @@ export default function ContactUs() {
   const submitContractorInfo = async (data) => {
     console.log('Making contractor API call with:', data);
     try {
-      const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/feedback/contractor`, {
+      const response = await fetch(`http://${import.meta.env.VITE_API_BASE_URL}/feedback/contractor`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -282,7 +282,7 @@ export default function ContactUs() {
   const submitWorkerInfo = async (data) => {
     console.log('Making worker API call with:', data);
     try {
-      const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/feedback/worker`, {
+      const response = await fetch(`http://${import.meta.env.VITE_API_BASE_URL}/feedback/worker`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -307,7 +307,7 @@ export default function ContactUs() {
   const submitOtherInfo = async (payload) => {
     console.log('Making other role API call with:', payload);
     try {
-      const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/feedback/other`, {
+      const response = await fetch(`http://${import.meta.env.VITE_API_BASE_URL}/feedback/other`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
