@@ -19,7 +19,7 @@ import Supervisor from './Views/MoreInfo/supervisor';
 import ContactUs from './Views/ContactUs/contactUs';
 
 
-import usePageTracking from './components/usePageTracking';
+import Analysis from './components/analysis';
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
@@ -28,13 +28,14 @@ const baseUrl = import.meta.env.BASE_URL || '/';
 
 function App() {
 
-  usePageTracking();
 
 
 
   return (
     <div className="min-h-screen overflow-x-hidden bg-gray-50 text-gray-800">
-      <Router basename={baseUrl}>
+
+        <Analysis/>
+      
         <ScrollToTop />
         <Navbar />
 
@@ -52,7 +53,7 @@ function App() {
         </Routes>
 
         <Footer />
-      </Router>
+      
     </div>
   );
 }
